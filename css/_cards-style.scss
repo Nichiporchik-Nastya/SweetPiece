@@ -1,0 +1,198 @@
+.cards-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards__wrapper,
+.sales-cards__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+// .filters-block
+
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // width: calc((100vw - 120px) / 6);
+    min-width: 200px;
+    padding: 8px;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: $light;
+    }
+
+    &-main {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        height: 15vw;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.4em;
+        margin: 12px 0px 8px;
+    }
+
+    &__info {
+        color: $light-text;
+        line-height: 1.5em;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        margin-top: 12px;
+    }
+
+    &__rating {
+        display: flex;
+        padding: 0px 8px;
+        font-weight: bold;
+        border-radius: 20px;
+        font-size: 1em;
+
+        &-number {
+            display: flex;
+            align-items: center;
+            margin-top: 2px;
+        }
+    }
+
+    &__cart-btn {
+        border-color: $green;
+        border: 3px solid $green;
+        font-size: 0.92em;
+    }
+}
+
+
+.likes {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &__like {
+        background: url(../img/icons/like.svg) no-repeat center;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        transition: .2s ease;
+        cursor: pointer;
+
+        &:hover,
+        &.clicked {
+            background: url(../img/icons/hover-like.svg) no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+
+.card:hover .card__cart-btn,
+.card__cart-btn_active {
+    background-color: $green;
+    color: $white;
+}
+
+@media(max-width: 1440px) {
+    .card__bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card {
+        padding: 0px;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &__img {
+            border-radius: 15px;
+        }
+
+        &__title {
+            margin: 6px 0px 4px;
+        }
+    }
+
+    .cards__wrapper,
+    .sales-cards__wrapper {
+        overflow-x: scroll;
+        gap: 12px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .card {
+        min-width: 220px;
+
+        &__img {
+            height: 20vw;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .card {
+        min-width: 180px;
+
+        &__img {
+            min-height: 25vw;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .cards__wrapper,
+    .sales-cards__wrapper {
+        gap: 8px;
+    }
+    .card {
+        &__img {
+            min-height: 35vw;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        &__title {
+            font-size: 1.2em;
+        }
+        &__img {
+            min-height: 45vw;
+        }
+    }
+}
