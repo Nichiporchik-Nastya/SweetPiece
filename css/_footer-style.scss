@@ -1,0 +1,146 @@
+.footer {
+    display: flex;
+    gap: $margin;
+    justify-content: space-between;
+    line-height: 1.4em;
+
+    border-top: 1px solid $border;
+    padding-top: calc($margin * 2);
+    padding-bottom: calc($margin * 4);
+
+    .copyright {
+        color: $light-text;
+    }
+
+    &-top {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $margin;
+        position: relative;
+    }
+
+    &-bottom {
+        display: flex;
+        gap: calc($margin * 2);
+
+        &__right,
+        &__left {
+            display: flex;
+            flex-direction: column;
+            gap: calc($margin * 2);
+        }
+    }
+
+}
+
+.address-blocks__wrapper {
+    display: flex;
+    gap: calc($margin * 2);
+}
+
+.address-block {
+    &__subtitle {
+        color: $light-text;
+    }
+}
+
+
+.privacy-policy {
+    color: $light-text;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: $min-padding;
+}
+
+.social-links {
+    display: flex;
+    gap: calc($margin * 2);
+    align-items: center;
+
+    a {
+        display: flex;
+
+        img {
+            align-self: center;
+        }
+    }
+}
+
+.address-blocks__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+    .footer {
+        &-top {
+            gap: $margin;
+        }
+
+        &-bottom {
+            gap: $margin;
+
+            &__right,
+            &__left {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        &-bottom {
+            flex-direction: column;
+            gap: calc($margin * 2);
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding-bottom: calc($margin * 5);
+    }
+
+    .copyright {
+        position: absolute;
+        width: 95vw;
+        bottom: -80px;
+    }
+
+    .social-links {
+        gap: $margin;
+    }
+}
+@media(max-width: 360px) {
+    .footer {
+        font-size: 0.8em;
+        line-height: 1em;
+        flex-direction: column-reverse;
+        gap: calc($margin * 2);
+        padding-bottom: $margin;
+
+        &-bottom {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        &-top{
+            gap: calc($margin * 3);
+        }
+    }
+    .address-blocks__wrapper {
+        justify-content: space-between;
+        flex-direction: row;
+        
+    }
+    .copyright {
+        position: static;
+    }
+}

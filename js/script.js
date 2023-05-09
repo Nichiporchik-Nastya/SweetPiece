@@ -1,31 +1,28 @@
+// let prevScrollpos = window.pageYOffset;
+// window.onscroll = () => {
+
+//     let currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos) {
+//         document.querySelector(".header__top").style.top = "-100%";
+//         // console.log('вниз');
+//     } else {
+//         document.querySelector(".header__top").style.top = "100%";
+//         // console.log('вверх');
+//     }
+//     prevScrollpos = currentScrollPos;
+// };
+
+
 let burgerBtn = document.querySelector('.burger-btn'),
-    burgerMenu = document.querySelector('.burger-menu'),
-    burgerClose = document.querySelector('.burger-menu__close');
-
-
-let prevScrollpos = window.pageYOffset;
-window.onscroll = () => {
-
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".header__bottom ").style.top = "100%";
-        // console.log('вниз');
-    } else {
-        document.querySelector(".header__bottom ").style.top = "-100%";
-        // console.log('вверх');
-    }
-    prevScrollpos = currentScrollPos;
-};
-
-let clicked = false;
-
+    burgerMenu = document.querySelector('.burger-menu');
 burgerBtn.onclick = () => {
     burgerMenu.classList.toggle('menu-active');
 };
 
+//кнопка бургер-меню
 
 let player = document.querySelector(".reverseEffect");
-
+let clicked = false;
 player.addEventListener("click", () => {
 
     if (clicked) {
@@ -39,4 +36,9 @@ player.addEventListener("click", () => {
 
 });
 
+ScrollOut({  
+	targets: ".animated-item",
+	threshold:0.5,
+	once: false
+});
 

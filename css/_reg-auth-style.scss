@@ -1,0 +1,139 @@
+.reg-main{
+    margin-top: 100px;
+}
+
+.form-input {
+    border: $borderThickness solid $border;
+    padding: $padding;
+    border-radius: $radius;
+    width: 340px;
+
+    &__wrapper {
+        margin-bottom: $margin;
+        position: relative;
+    }
+
+    &__err {
+        margin-bottom: $min-padding;
+        color: $orange;
+        font-size: 0.8em;
+        position: absolute;
+        bottom: -20px;
+        left: 8px;
+    }
+}
+
+
+.section-block__form {
+    margin: calc($margin * 2) auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.unchecked {
+    animation: shake .2s ease 0s 1;
+}
+
+@keyframes shake {
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.recover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: $margin;
+    width: 95%;
+
+    a {
+        color: $light-text;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+label[for='ckbox'] {
+    cursor: pointer;
+    padding-left: 32px;
+    display: block;
+    position: relative;
+    line-height: 18px;
+}
+
+label[for='ckbox'] a {
+    color: $orange;
+}
+
+
+#ckbox+label::before {
+    content: '';
+    position: absolute;
+    border: $borderThickness solid $border;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+#ckbox:checked+label::before {
+    border-top: $borderThickness solid transparent;
+    border-left: $borderThickness solid transparent;
+    border-right: $borderThickness solid $orange;
+    border-bottom: $borderThickness solid $orange;
+    transform: rotate(40deg);
+    width: 12px;
+    height: 22px;
+    transform-origin: 100% 100%;
+    top: -4px;
+    left: -5px;
+}
+
+#ckbox:not(:checked),
+#ckbox:checked {
+    display: none;
+}
+
+
+
+.auth-block {
+    display: flex;
+    margin-top: calc($margin * 2);
+    justify-content: center;
+
+    h1{
+        text-align: center;
+    }
+}
+
+
+
+
+@media(max-width: 480px) {
+    h1{
+        font-size: 2.7em;
+    }
+    .form-btns .header-btns{
+        gap: 2px;
+    }
+}
+
+@media(max-width: 360px) {
+    .form-input {
+        width: 95vw;}
+}

@@ -16,10 +16,11 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
     <title>Лакомый кусочек</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,6 @@
             <nav class="nav-static">
                 <a href="/" class="logo">
                     <div class="logo__link">
-
                         <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent"
                             speed="1" style="height: 3em;" hover></lottie-player>
                         <img class="logo__img" src="./img/logo.svg" alt="Логотип" title="На главную">
@@ -40,80 +40,46 @@
                 </a>
                 <ul class="nav-static__menu">
                     <li class="nav-static__menu-item">
-                        <a href="./menu.php" id="menu">Меню</a>
+                        <a href="./menu.html" class="header-btns__btn btn id=" menu">Меню</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" id="about">О нас</a>
+                        <a href="#" class="header-btns__btn btn id=" about">Скидки</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" id="contacts">Контакты</a>
+                        <a href="#" class="header-btns__btn btn id=" contacts">Отзывы</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" id="shops">Наши заведения</a>
+                        <a href="#" class="header-btns__btn btn id=" shops">О нас</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="header-btns">
+                <a href="./menu.html" class="search__link btn">
+                    <img src="img/icons/search.svg" class="search__icon">
+                </a>
                 <a href="tel:+375332068812" class="header-btns__btn btn">
                     +375 (33) 206-88-12
                 </a>
-                <a href="login.php" class="header-btns__secondary btn">
+                <a href="./auth.html" class="header-btns__secondary btn">
                     Войти
                 </a>
-                <a href="registration.php" class="header-btns__primary btn">
+                <a href="./reg.html" class="header-btns__primary btn">
                     Зарегистрироваться
                 </a>
                 <lottie-player class="burger-btn reverseEffect" src="./animations/menuV2.json" speed="1"
                     style="fill: #fff; height: 3em; width: 40px;"></lottie-player>
             </div>
-
-        </div>
-
-
-        <div class="header__bottom container">
-            <nav class="nav-dynamic">
-                <ul class="nav-dynamic__menu">
-                    <li class="nav-dynamic__menu-item">
-                        <a class="nav-dynamic__menu-link" href="./menu.php">
-                            Выпечка
-                        </a>
-                    </li>
-                    <li class="nav-dynamic__menu-item">
-                        <a class="nav-dynamic__menu-link" href="./menu.php">
-                            Десерты
-                        </a>
-                    </li>
-                    <li class="nav-dynamic__menu-item">
-                        <a class="nav-dynamic__menu-link" href="./menu.php">
-                            Конфеты
-                        </a>
-                    </li>
-                    <li class="nav-dynamic__menu-item">
-                        <a class="nav-dynamic__menu-link" href="./menu.php">
-                            Наборы
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="search-input__wrapper">
-                <img src="img/icons/search.svg" class="search-input__icon">
-                <input class="search-input" type="text" placeholder="Малиновый конфи.." maxlength="50"
-                    name="search-input">
-            </div>
         </div>
 
 
         <div class="container burger-menu">
-
-
             <div class="header-btns">
-                <a href="login.php" class="header-btns__secondary btn">
+                <a href="./auth.html" class="header-btns__secondary btn">
                     Войти
-                    <span class="hover-block"></span></a>
-                <a href="registration.php" class="header-btns__primary btn">
+                </a>
+                <a href="./reg.html" class="header-btns__primary btn">
                     Зарегистрироваться
-                    <span class="hover-block"></span>
                 </a>
             </div>
 
@@ -121,16 +87,19 @@
                 <div class="burger-menu__nav-title">Разделы</div>
                 <ul class="burger-menu__nav">
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php" id="menu">Меню</a>
+                        <a href="./menu.html" id="search">Поиск...</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.html" id="menu">Меню</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" id="sales">Скидки</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" id="reviews">Отзывы</a>
                     </li>
                     <li class="burger-menu__nav-item">
                         <a href="#" id="about">О нас</a>
-                    </li>
-                    <li class="burger-menu__nav-item">
-                        <a href="#" id="contacts">Контакты</a>
-                    </li>
-                    <li class="burger-menu__nav-item">
-                        <a href="#" id="shops">Наши заведения</a>
                     </li>
                 </ul>
                 <div class="burger-menu__nav-title">Категории</div>
@@ -157,8 +126,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="">
-
+            <div>
                 <ul class="burger-menu__social-links">
                     <li class="" title="Вконтакте">
                         <a href="#" class="">
@@ -177,78 +145,55 @@
                     </li>
                 </ul>
                 <div class="burger-menu__bottom">
-                    <p>&copy; <span class="current-year">2023</span>, Лакомый кусочек | Все права защищены</p>
-                    <p>Дизайн и разработка: НАИ</p>
+                    <div class="copyright">
+                        &copy;2010 — 2023, Лакомый кусочек Все права защищены
+                        <br />
+                        Дизайн и разработка: Ничипорчик А.И.
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <!-- <div class="burger-menu__top">
-                <a href="/" class="logo">
-                    <div class="logo__link">
-                        <img src="./img/logo.svg" alt="Логотип" title="На главную">
-                    </div>
-                    <div class="logo__title">
-                        <p class="logo__first-line">Лакомый кусочек</p>
-                        <p class="logo__second-line">Кафе-кондитерская</p>
-                    </div>
-                </a>
-                <a href="tel:+375332068812" class="header-btns__btn btn">
-                    +375 (33) 206-88-12
-                </a>
-                <div class="burger-menu__close">
-                    <img src="./img/icons/close.svg">
-                </div>
-            </div> -->
     </header>
 
-
-
-
     <main class="main container">
-
-
-
-
         <section class="hero-block section">
             <div class="hero-block__info">
-                <h1 class="hero-title">Лакомый
+                <h1 class="hero-title animated-item">Лакомый
                     <span class="hero-title__bar">кусочек</span>
                     <br>
                     по любому поводу
                 </h1>
-                <h6 class="hero-block__paragraph">
+                <h6 class="hero-block__paragraph animated-item" style="--item-index:1;">
                     Выберите подарочный набор, порадуйте себя любимого, сделайте праздник ещё ярче!
                 </h6>
             </div>
-            <div class="hero-img__wrapper">
+            <div class="hero-img__wrapper animated-item" style="--item-index:2;">
                 <img src="./img/hero-image.jpg" alt="Основное изображение">
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Всё, что душе угодно!</h2>
+            <h2 class="section-title animated-item">Всё, что душе угодно!</h2>
             <div class="category-cards__wrapper">
-                <a href="#" class="category-card">
+                <a href="#" class="category-card animated-item" style="--item-index:1;">
                     <div class="category-card__info">
                         <h3 class="category-card__title">Выпечка</h3>
                         <h6 class="category-card__subtitle">Хлеб, круассаны, слойки, печенье, пончики</h6>
                     </div>
                 </a>
-                <a href="#" class="category-card">
+                <a href="#" class="category-card animated-item" style="--item-index:2;">
                     <div class="category-card__info">
                         <h3 class="category-card__title">Конфеты</h3>
                         <h6 class="category-card__subtitle">Зефир, мармелад, карамель, жвачка</h6>
                     </div>
                 </a>
-                <a href="#" class="category-card">
+                <a href="#" class="category-card animated-item" style="--item-index:3;">
                     <div class="category-card__info">
                         <h3 class="category-card__title">Десерты</h3>
                         <h6 class="category-card__subtitle">Пирожные, торты, вафли, капкейки, мороженое</h6>
                     </div>
                 </a>
-                <a href="#" class="category-card">
+                <a href="#" class="category-card animated-item" style="--item-index:4;">
                     <div class="category-card__info">
                         <h3 class="category-card__title">Наборы</h3>
                         <h6 class="category-card__subtitle">Праздничные и тематические наборы разных размеров</h6>
@@ -258,9 +203,9 @@
         </section>
 
         <section class="cards-section section">
-            <h2 class="section-title">Наши новинки</h2>
+            <h2 class="section-title animated-item">Наши новинки</h2>
             <div class="cards__wrapper">
-                <div class="card">
+                <div class="card animated-item" style="--item-index:1;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -282,7 +227,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:2;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -304,7 +249,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:3;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -326,7 +271,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:4;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -348,7 +293,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:5;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -370,13 +315,13 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn section-btn">Посмотреть всё</a>
+            <a href="#" class="btn section-btn animated-item" style="--item-index:6;">Посмотреть всё</a>
         </section>
 
         <section class="cards-section section">
-            <h2 class="section-title">Популярные десерты</h2>
+            <h2 class="section-title animated-item">Популярные десерты</h2>
             <div class="cards__wrapper">
-                <div class="card">
+                <div class="card animated-item" style="--item-index:1;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -398,7 +343,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:2;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -420,7 +365,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:3;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -442,7 +387,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:4;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -464,7 +409,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card animated-item" style="--item-index:5;">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" data-productId="1" title="Нравится">
@@ -486,20 +431,21 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn section-btn">Посмотреть всё</a>
+            <a href="#" class="btn section-btn animated-item" style="--item-index:6;">Посмотреть всё</a>
         </section>
 
         <section class="section">
             <div class="benefits-section-top">
-                <h2 class="section-title benefits-section-title">В чём наша уникальность?</h2>
-                <div class="benefits-section__paragraph">
+                <h2 class="section-title benefits-section-title animated-item" style="--item-index:1;">В чём наша
+                    уникальность?</h2>
+                <h6 class="benefits-section__paragraph animated-item" style="--item-index:2;">
                     Сеть кафе-кондитерских № 1 в Беларуси
-                </div>
-                <a href="#" class="btn section-btn">В каталог</a>
+                </h6>
+                <a href="#" class="btn section-btn animated-item" style="--item-index:3;">В каталог</a>
             </div>
             <div class="benefits-section-bottom">
                 <div class="benefits-blocks">
-                    <div class="benefits-block">
+                    <div class="benefits-block animated-item" style="--item-index:4;">
                         <div class="benefits-block__icon"></div>
                         <h3 class="benefits-block__title">
                             Удобный расчёт
@@ -512,7 +458,7 @@
                             Узнать больше
                         </a>
                     </div>
-                    <div class="benefits-block">
+                    <div class="benefits-block animated-item" style="--item-index:5;">
                         <div class="benefits-block__icon"></div>
                         <h3 class="benefits-block__title">
                             Удобный расчёт
@@ -525,7 +471,7 @@
                             Узнать больше
                         </a>
                     </div>
-                    <div class="benefits-block">
+                    <div class="benefits-block animated-item" style="--item-index:6;">
                         <div class="benefits-block__icon"></div>
                         <h3 class="benefits-block__title">
                             Удобный расчёт
@@ -538,7 +484,7 @@
                             Узнать больше
                         </a>
                     </div>
-                    <div class="benefits-block">
+                    <div class="benefits-block animated-item" style="--item-index:7;">
                         <div class="benefits-block__icon"></div>
                         <h3 class="benefits-block__title">
                             Удобный расчёт
@@ -553,17 +499,16 @@
                     </div>
 
                 </div>
-                <div class="benefits-img-wrapper">
+                <div class="benefits-img-wrapper animated-item" style="--item-index:4;">
                     <img src="./img/hero-image.jpg" alt="Наша продукция">
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Скидки и акции</h2>
-
+            <h2 class="section-title animated-item">Скидки и акции</h2>
             <div class="sales-cards__wrapper">
-                <div class="sale-card">
+                <div class="sale-card animated-item" style="--item-index:1;">
                     <div class="sale-card__img-wrapper">
                         <img src="./img/hero-image.jpg" alt="Акция">
                     </div>
@@ -574,7 +519,7 @@
                         Покупайте пироженые и булочки после 18:00 в 2 раза дешевле
                     </div>
                 </div>
-                <div class="sale-card">
+                <div class="sale-card animated-item" style="--item-index:2;">
                     <div class="sale-card__img-wrapper">
                         <img src="./img/hero-image.jpg" alt="Акция">
                     </div>
@@ -585,7 +530,7 @@
                         Покупайте пироженые и булочки после 18:00 в 2 раза дешевле
                     </div>
                 </div>
-                <div class="sale-card">
+                <div class="sale-card animated-item" style="--item-index:3;">
                     <div class="sale-card__img-wrapper">
                         <img src="./img/hero-image.jpg" alt="Акция">
                     </div>
@@ -596,44 +541,29 @@
                         Покупайте пироженые и булочки после 18:00 в 2 раза дешевле
                     </div>
                 </div>
-
-
             </div>
-            <a href="#" class="btn section-btn">Посмотреть всё</a>
-
+            <a href="#" class="btn section-btn animated-item" style="--item-index:4;">Посмотреть всё</a>
         </section>
-
-
+        <!-- 
+        <section class="section">
+            <h2 class="section-title animated-item">Вам захочется ещё кусочек</h2>
+            <h6 class="reviews-block__paragraph">Клиенты говорят «Спасибо» и возвращаются к нам снова. Нашу кондитерскую рекомендуют другим, так как мы готовим с любовью</h6>
+            <a href="#" class="btn section-btn animated-item" style="--item-index:4;">Оставить отзыв</a>
+        </section> -->
 
 
         <section class="cards-section section">
-            <h2 class="section-title">Выбирай свой любимый вкус</h2>
+            <h2 class="section-title animated-item" style="--item-index:1;">Выбирай свой любимый вкус</h2>
             <div class="taste-block__wrapper">
                 <div class="taste-block__group">
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:2;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
                             <p class="taste-block__subtitle">14 десертов</p>
                         </div>
                     </a>
-                    <a href="./menu.html" class="taste-block">
-                        <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
-                        <div class="taste-block__info">
-                            <h3 class="taste-block__title">Малина</h3>
-                            <p class="taste-block__subtitle">14 десертов</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="taste-block__group">
-                    <a href="./menu.html" class="taste-block">
-                        <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
-                        <div class="taste-block__info">
-                            <h3 class="taste-block__title">Малина</h3>
-                            <p class="taste-block__subtitle">14 десертов</p>
-                        </div>
-                    </a>
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:3;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
@@ -642,14 +572,14 @@
                     </a>
                 </div>
                 <div class="taste-block__group">
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:4;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
                             <p class="taste-block__subtitle">14 десертов</p>
                         </div>
                     </a>
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:5;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
@@ -658,14 +588,30 @@
                     </a>
                 </div>
                 <div class="taste-block__group">
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:6;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
                             <p class="taste-block__subtitle">14 десертов</p>
                         </div>
                     </a>
-                    <a href="./menu.html" class="taste-block">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:7;">
+                        <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
+                        <div class="taste-block__info">
+                            <h3 class="taste-block__title">Малина</h3>
+                            <p class="taste-block__subtitle">14 десертов</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="taste-block__group">
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:8;">
+                        <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
+                        <div class="taste-block__info">
+                            <h3 class="taste-block__title">Малина</h3>
+                            <p class="taste-block__subtitle">14 десертов</p>
+                        </div>
+                    </a>
+                    <a href="./menu.html" class="taste-block animated-item" style="--item-index:9;">
                         <img class="taste-block__img" src="./img/taste1.png" alt="Вкус">
                         <div class="taste-block__info">
                             <h3 class="taste-block__title">Малина</h3>
@@ -674,35 +620,91 @@
                     </a>
                 </div>
             </div>
-            <a href="./menu.html" class="btn section-btn">
+            <a href="./menu.html" class="btn section-btn animated-item" style="--item-index:5;">
                 Посмотреть всё
             </a>
         </section>
-
-
-
-
-
-
-        <section class="section search-block">
-            <h2 class="section-title">Ищите что-то другое?</h2>
-            <div class="search-input__wrapper">
-                <img src="img/icons/search.svg" class="search-input__icon">
-                <input class="search-input" type="text" placeholder="Малиновый конфи.." maxlength="50"
-                    name="search-input">
-            </div>
-            <div class="search-tags">
-                <div class="tag">Кокос</div>
-                <div class="tag">Клубничная начинка</div>
-                <div class="tag">Кислый мармелад</div>
-                <div class="tag">Арахисовое печенье</div>
-                <div class="tag">Пирожное «Картошка»</div>
-            </div>
-        </section>
-
-
-
     </main>
+
+    <section class="section search-block">
+        <h2 class="section-title animated-item" style="--item-index:1;">Ищите что-то другое?</h2>
+        <div class="search-input__wrapper animated-item" style="--item-index:2;">
+            <img src="img/icons/yellow-search.svg" class="search-input__icon">
+            <input class="search-input" type="text" placeholder="Малиновый конфи.." maxlength="50" name="search-input">
+        </div>
+        <div class="search-tags">
+            <div class="tag animated-item" style="--item-index:3;">Кокос</div>
+            <div class="tag animated-item" style="--item-index:4;">Клубничная начинка</div>
+            <div class="tag animated-item" style="--item-index:5;">Кислый мармелад</div>
+            <div class="tag animated-item" style="--item-index:6;">Арахисовое печенье</div>
+            <div class="tag animated-item" style="--item-index:7;">Пирожное «Картошка»</div>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="footer-top">
+            <div class="address-blocks__wrapper">
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy;2010 — 2023, Лакомый кусочек Все права защищены
+                <br />
+                Дизайн и разработка: Ничипорчик А.И.
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__left">
+                <div class="opening-hours">
+                    9:00—20:00
+                    <br />
+                    Ежедневно
+                </div>
+                <div class="contacts">
+                    <a href="mailto:kysochek@mail.ru">kysochek@mail.ru</a>
+                    <div class="social-links">
+                        <a href="https:/vk.com" target="_blank">
+                            <img src="./img/icons/vk.svg" alt="Вконтакте">
+                        </a>
+                        <a href="https:/telegram.org" target="_blank">
+                            <img src="./img/icons/telegram.svg" alt="Вконтакте">
+                        </a>
+                        <a href="https:/viber.com" target="_blank">
+                            <img src="./img/icons/viber.svg" alt="Вконтакте">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom__right">
+
+                <div class="phone-numbers">
+                    +375 (44) 272-57-42
+                    <br />
+                    +375 (33) 206-88-12
+                </div>
+                <a href="./404.html" class="privacy-policy">
+                    Политика
+                    <br />
+                    конфиденциальности
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>

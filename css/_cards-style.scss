@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // width: calc((100vw - 120px) / 6);
+    width: 100%;
     min-width: 200px;
     padding: 8px;
     position: relative;
@@ -29,9 +29,6 @@
     cursor: pointer;
     transition: .2s ease;
 
-    &:hover {
-        background-color: $light;
-    }
 
     &-main {
         position: relative;
@@ -150,6 +147,7 @@
     .cards__wrapper,
     .sales-cards__wrapper {
         overflow-x: scroll;
+        overflow-y: hidden;
         gap: 12px;
     }
 }

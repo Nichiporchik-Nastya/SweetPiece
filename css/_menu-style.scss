@@ -1,0 +1,240 @@
+.menu-main {
+    margin-top: calc($margin * 4);
+}
+
+.filters-block__input-wrapper {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.filters-block__items-wrapper {
+    display: flex;
+}
+
+.filters-block__items-block-wrapper {
+    margin-right: $margin;
+}
+
+.filters-block__title {
+    font-weight: bold;
+    // font-size: 1.4em;
+    margin-top: $margin;
+}
+
+.filters-block__title_first {
+    margin-top: 0px;
+}
+
+.search-filters-show__wrapper {
+    display: flex;
+    gap: $margin;
+    align-items: center;
+    margin: calc($margin / 2) 0px;
+}
+
+.close-filters-btn {
+    display: none;
+}
+
+.menu-blocks__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: $margin;
+    // position: relative;
+}
+
+.menu-blocks__right-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+.show-more {
+    background-color: $light;
+    padding: $padding;
+    margin-top: calc($margin / 2);
+    border-radius: $radius;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        // right: -$margin;
+        right: $min-padding;
+        width: 12px;
+        height: 7px;
+        background: url('../img/icons/arrow.svg') no-repeat;
+    }
+}
+
+label[for^="price"] {
+    margin-right: 8px;
+}
+
+/*Обозначает элемент с именем атрибута for значение которого начинается с "price"*/
+input[type="number"] {
+    border-radius: $radius;
+    border: $borderThickness solid $yellow;
+    padding: $padding;
+    width: 70%;
+}
+
+.hidden-block {
+    display: none;
+}
+
+.hidden-block.show {
+    display: block;
+}
+
+input[type='radio'],
+input[type='checkbox'],
+label {
+    cursor: pointer;
+}
+
+label {
+    padding-top: 1px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    position: relative;
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+input[type='radio']::before,
+input[type='checkbox']::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $border;
+}
+
+input[type='radio']:checked::after,
+input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $yellow;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+input[type='checkbox']::before,
+input[type='checkbox']:checked::after {
+    border-radius: 3px;
+}
+
+.show-filters-btn {
+    display: none;
+}
+
+.filters-block__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 80vh;
+    overflow-y: scroll;
+    min-width: 100%;
+    gap: calc($margin / 2);
+
+    .card {
+        min-width: 100px;
+        max-width: 260px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-main {
+        position: relative;
+        top: 0;
+    }
+
+    .filters-block {
+        position: fixed;
+        background-color: $white;
+        z-index: 1;
+        width: 65%;
+        height: 100%;
+        top: 25%;
+        right: 0;
+        padding-left: $margin;
+        padding-right: $min-padding;
+        padding-top: $margin;
+        transform: translateX(100%);
+        transition: $transition;
+        border-radius: $radius 0 0 0;
+    }
+
+    .filters-block.active {
+        box-shadow: 0 0 0 500px rgba($color: $black, $alpha: 0.5);
+        transform: translateX(0);
+        display: block;
+    }
+
+    .show-filters-btn {
+        display: flex;
+    }
+
+    .menu-cards__wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+
+    .close-filters-btn {
+        display: block;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .menu-cards__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .filters-block {
+        width: 100%;
+    }
+
+    .menu-cards__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// @media (max-width: 360px) {
+
+
+//     .menu-cards__wrapper {
+//         grid-template-columns: repeat(1, 1fr);
+//     }
+// }

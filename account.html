@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--адаптиная вёрстка, масштаб 1 к 1 изначально,  для запрета масштабирования, -->
+
+
+    <meta name="keywords"
+        content="Кафе-кондитерская, кафе, кондитерская, выпечка, десерт, начинка, печенье, конфеты, лакомство">
+    <meta name="description" content="Сайт кафе-кондитерской «Лакомый кусочек»">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/account-style.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+</head>
+
+<body>
+    хедер
+    <main>
+
+        <div class="account__wrapper">
+            <div class="account-info container">
+                <div class="forms_wrapper">
+
+                    <form class="account-info__wrapper">
+                        <div class="account-info__name">
+                            <h2 class="section-title account-info__title">имя</h2>
+                            <div class="edit-account-info__btn btn search__link">
+                                <img src="./img/icons/edit.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" name="name" class="account_input account_input-name hidden" disabled
+                                value="имя" maxlength="50">
+                            <span class="form-input__err name"></span>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" name="email" class="account_input" disabled value="электронная почта"
+                                maxlength="50">
+                            <span class="form-input__err email"></span>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" name="phone" class="account_input" disabled value="телефон"
+                                maxlength="50">
+                            <span class="form-input__err phone"></span>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" name="address" class="account_input" disabled value="адрес"
+                                maxlength="50">
+                            <span class="form-input__err address"></span>
+                        </div>
+                        <input type="text" value="id" name="user_id" hidden>
+                    </form>
+
+                    <form class="password_form">
+                        Изменить пароль
+                        <div class="form-input__wrapper">
+                            <input type="text" name="password1" class="account_password account_input_active" required
+                                placeholder="Текущий пароль.." maxlength="50"></input>
+                            <span class="form-input__err password1"></span>
+                        </div>
+                        <div class="form-input__wrapper">
+                            <input type="text" name="password2" class="account_password account_input_active" required
+                                placeholder="Новый пароль.." maxlength="50"></input>
+                            <span class="form-input__err password2"></span>
+                        </div>
+
+                        <button class="header-btns__login btn section-btn">Изменить</button>
+                    </form>
+
+                </div>
+
+                <section class="favourites-section">
+                    <h2 class="section-title">Избранное</h2>
+                    <div class="cards__wrapper">
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" data-productId="0" title="Нравится"></div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">54</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/30683465.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">jhjgc</h3>
+                            <div class="card__bottom">
+                                <h3 class="card__price">8 руб.</h3>
+
+                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="id">В избранном
+                                    &#10004;</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" data-productId="0" title="Нравится"></div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">54</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/30683465.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">jhjgc</h3>
+                            <div class="card__bottom">
+                                <h3 class="card__price">8 руб.</h3>
+
+                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="id">В избранном
+                                    &#10004;</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" data-productId="0" title="Нравится"></div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">54</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/30683465.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">jhjgc</h3>
+                            <div class="card__bottom">
+                                <h3 class="card__price">8 руб.</h3>
+
+                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="id">В избранном
+                                    &#10004;</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" data-productId="0" title="Нравится"></div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">54</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/30683465.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">jhjgc</h3>
+                            <div class="card__bottom">
+                                <h3 class="card__price">8 руб.</h3>
+
+                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="id">В избранном
+                                    &#10004;</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" data-productId="0" title="Нравится"></div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">54</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/30683465.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">jhjgc</h3>
+                            <div class="card__bottom">
+                                <h3 class="card__price">8 руб.</h3>
+
+                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="id">В избранном
+                                    &#10004;</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </div>
+            <div class="cart__content">
+                <div class="cart__content-top">
+                    <h2 class="section-title">Корзина</h2>
+
+                </div>
+                <div class="cart">
+                    <div class="cart__card">
+                        <div class="cart__card-img-wrapper">
+                            <img class="cart__card-img" src="./img/products/1.jpg">
+                        </div>
+                        <div class="cart__card-info">
+                            <div class="cart__card-title">Клубничное мороженое</div>
+                            <div class="cart__card-price">6,25 руб.</div>
+                            <div class="cart__card-counter">2</div>
+                        </div>
+                        <div class="cart__card-res-block">
+                            <div class="cart__card-res-price">12,50 руб.</div>
+                            <div class="cart__card-res-remove"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart__card">
+                        <div class="cart__card-img-wrapper">
+                            <img class="cart__card-img" src="./img/products/1.jpg">
+                        </div>
+                        <div class="cart__card-info">
+                            <div class="cart__card-title">Клубничное мороженое</div>
+                            <div class="cart__card-price">6,25 руб.</div>
+                            <div class="cart__card-counter">2</div>
+                        </div>
+                        <div class="cart__card-res-block">
+                            <div class="cart__card-res-price">12,50 руб.</div>
+                            <div class="cart__card-res-remove"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart__card">
+                        <div class="cart__card-img-wrapper">
+                            <img class="cart__card-img" src="./img/products/1.jpg">
+                        </div>
+                        <div class="cart__card-info">
+                            <div class="cart__card-title">Клубничное мороженое</div>
+                            <div class="cart__card-price">6,25 руб.</div>
+                            <div class="cart__card-counter">2</div>
+                        </div>
+                        <div class="cart__card-res-block">
+                            <div class="cart__card-res-price">12,50 руб.</div>
+                            <div class="cart__card-res-remove"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart__card">
+                        <div class="cart__card-img-wrapper">
+                            <img class="cart__card-img" src="./img/products/1.jpg">
+                        </div>
+                        <div class="cart__card-info">
+                            <div class="cart__card-title">Клубничное мороженое</div>
+                            <div class="cart__card-price">6,25 руб.</div>
+                            <div class="cart__card-counter">2</div>
+                        </div>
+                        <div class="cart__card-res-block">
+                            <div class="cart__card-res-price">12,50 руб.</div>
+                            <div class="cart__card-res-remove"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart__card">
+                        <div class="cart__card-img-wrapper">
+                            <img class="cart__card-img" src="./img/products/1.jpg">
+                        </div>
+                        <div class="cart__card-info">
+                            <div class="cart__card-title">Клубничное мороженое</div>
+                            <div class="cart__card-price">6,25 руб.</div>
+                            <div class="cart__card-counter">2222</div>
+                        </div>
+                        <div class="cart__card-res-block">
+                            <div class="cart__card-res-price">12,50 руб.</div>
+                            <div class="cart__card-res-remove"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cart-actions">
+                    <div class="cart-actions__top">
+                        <p class="cart-actions__text">Может, ещё кусочек?</p>
+                        <a href="./menu.html" class="btn header-btns__secondary">
+                            В каталог
+                        </a>
+                    </div>
+                    <div class="cart-actions__bottom">
+                        <div class="cart-actions__price">
+                            Итого 122.80 руб.
+                        </div>
+                        <a href="#" class="btn section-btn">
+                            К оформлению
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    футер
+</body>
+
+</html>
