@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--адаптиная вёрстка, масштаб 1 к 1 изначально,  для запрета масштабирования, -->
+
+
+    <meta name="keywords"
+        content="Кафе-кондитерская, кафе, кондитерская, выпечка, десерт, начинка, печенье, конфеты, лакомство">
+    <meta name="description" content="Сайт кафе-кондитерской «Лакомый кусочек»">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <title>Скидки и акции</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top container">
+            <nav class="nav-static">
+                <a href="/" class="logo">
+                    <div class="logo__link">
+                        <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent"
+                            speed="1" style="height: 3em;" hover></lottie-player>
+                        <img class="logo__img" src="./img/logo.svg" alt="Логотип" title="На главную">
+                    </div>
+                    <div class="logo__title">
+                        <p class="logo__first-line">Лакомый кусочек</p>
+                        <p class="logo__second-line">Кафе-кондитерская</p>
+                    </div>
+                </a>
+                <ul class="nav-static__menu">
+                    <li class="nav-static__menu-item">
+                        <a href="./menu.html" class="header-btns__btn btn" id="menu">Меню</a>
+                    </li>
+                    <li class="nav-static__menu-item">
+                        <a href="./sales.html" class="header-btns__btn btn" id="about">Скидки</a>
+                    </li>
+                    <li class="nav-static__menu-item">
+                        <a href="#" class="header-btns__btn btn" id="contacts">Отзывы</a>
+                    </li>
+                    <li class="nav-static__menu-item">
+                        <a href="#" class="header-btns__btn btn" id="shops">О нас</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-btns">
+                <a href="./menu.html" class="search__link btn">
+                    <img src="img/icons/search.svg" class="search__icon" alt="Поиск...">
+                </a>
+                <a href="tel:+375332068812" class="header-btns__btn btn">
+                    +375 (33) 206-88-12
+                </a>
+                <a href="./auth.html" class="header-btns__secondary btn">
+                    Войти
+                </a>
+                <a href="./reg.html" class="header-btns__primary btn">
+                    Зарегистрироваться
+                </a>
+                <lottie-player class="burger-btn reverseEffect" src="./animations/menuV2.json" speed="1"
+                    style="height: 3em; width: 40px;" alt="Бургер-меню"></lottie-player>
+            </div>
+        </div>
+
+
+        <div class="container burger-menu">
+            <div class="header-btns">
+                <a href="./auth.html" class="header-btns__secondary btn">
+                    Войти
+                </a>
+                <a href="./reg.html" class="header-btns__primary btn">
+                    Зарегистрироваться
+                </a>
+            </div>
+
+            <div class="burger-menu__nav-wrapper">
+                <div class="burger-menu__nav-title">Разделы</div>
+                <ul class="burger-menu__nav">
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.html" id="search">Поиск...</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.html" id="menu">Меню</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./sales.html" id="sales">Скидки</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" id="reviews">Отзывы</a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="#" id="about">О нас</a>
+                    </li>
+                </ul>
+                <div class="burger-menu__nav-title">Категории</div>
+                <ul class="burger-menu__nav">
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.php">
+                            Выпечка
+                        </a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.php">
+                            Десерты
+                        </a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.php">
+                            Конфеты
+                        </a>
+                    </li>
+                    <li class="burger-menu__nav-item">
+                        <a href="./menu.php">
+                            Наборы
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="burger-menu__social-links">
+                    <li title="Вконтакте">
+                        <a href="https:/vk.com/">
+                            Вконтакте
+                        </a>
+                    </li>
+                    <li title="Telegram">
+                        <a href="https:/telegram.org/">
+                            Telegram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https:/viber.com/" title="Viber">
+                            Viber
+                        </a>
+                    </li>
+                </ul>
+                <div class="burger-menu__bottom">
+                    <div class="copyright">
+                        &copy;2010 — 2023, Лакомый кусочек Все права защищены
+                        <br />
+                        Дизайн и разработка: Ничипорчик А.И.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <main class="main container other-main">
+        <section class="section">
+            <h2 class="section-title animated-item">Скидки и акции</h2>
+            <div class="main-sales-cards__wrapper">
+                <div class="sale-card animated-item big-card" style="--item-index:1;">
+                    <div class="sale-card__img-wrapper">
+                        <img src="./img/sale-1.png" alt="Акция">
+                    </div>
+                    <h3 class="sale-card__title">
+                        Покупать наборы стало ещё выгоднее!
+                    </h3>
+                    <div class="sale-card__info">
+                        Только до 2 мая при покупке любого подарочного набора на сумму от 50 рублей, набор конфет «Ассорти» в подарок
+                    </div>
+                </div>
+                <div class="sale-card animated-item little-card" style="--item-index:2;">
+                    <div class="sale-card__img-wrapper">
+                        <img src="./img/sale-2.png" alt="Акция">
+                    </div>
+                    <h3 class="sale-card__title">
+                        Подарочные купоны и сертификаты
+                    </h3>
+                    <div class="sale-card__info">
+                        Создать праздничное настроение просто!
+                    </div>
+                </div>
+                <div class="sale-card animated-item little-card" style="--item-index:3;">
+                    <div class="sale-card__img-wrapper">
+                        <img src="./img/sale-3.png" alt="Акция">
+                    </div>
+                    <h3 class="sale-card__title">
+                        Сегодня — можно
+                    </h3>
+                    <div class="sale-card__info">
+                        Покупайте пироженые и булочки после 18:00 в 2 раза дешевле
+                    </div>
+                </div>
+                <div class="sale-card animated-item little-card" style="--item-index:3;">
+                    <div class="sale-card__img-wrapper">
+                        <img src="./img/sale-4.png" alt="Акция">
+                    </div>
+                    <h3 class="sale-card__title">
+                        Именинникам скидки!
+                    </h3>
+                    <div class="sale-card__info">
+                        –50% на торты, пироги и пирожные, заказанные в день рождения
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+
+        
+    </main>
+
+    <section class="section search-block">
+        <h2 class="section-title animated-item" style="--item-index:1;">Ищите что-то другое?</h2>
+        <div class="search-input__wrapper animated-item" style="--item-index:2;">
+            <img src="img/icons/yellow-search.svg" class="search-input__icon">
+            <input class="search-input" type="text" placeholder="Малиновый конфи.." maxlength="50" name="search-input">
+        </div>
+        <div class="search-tags">
+            <div class="tag animated-item" style="--item-index:3;">Кокос</div>
+            <div class="tag animated-item" style="--item-index:4;">Клубничная начинка</div>
+            <div class="tag animated-item" style="--item-index:5;">Кислый мармелад</div>
+            <div class="tag animated-item" style="--item-index:6;">Арахисовое печенье</div>
+            <div class="tag animated-item" style="--item-index:7;">Пирожное «Картошка»</div>
+        </div>
+    </section>
+    <!-- <footer></footer> -->
+    <footer class="footer container">
+        <div class="footer-top">
+            <div class="address-blocks__wrapper">
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy;2010 — 2023, Лакомый кусочек Все права защищены
+                <br />
+                Дизайн и разработка: Ничипорчик А.И.
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__left">
+                <div class="opening-hours">
+                    9:00—20:00
+                    <br />
+                    Ежедневно
+                </div>
+                <div class="contacts">
+                    <a href="mailto:kysochek@mail.ru">kysochek@mail.ru</a>
+                    <div class="social-links">
+                        <a href="https:/vk.com/" target="_blank">
+                            <img src="./img/icons/vk.svg" alt="Вконтакте">
+                        </a>
+                        <a href="https:/telegram.org/" target="_blank">
+                            <img src="./img/icons/telegram.svg" alt="Телеграм">
+                        </a>
+                        <a href="https:/viber.com/" target="_blank">
+                            <img src="./img/icons/viber.svg" alt="Вайбер">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom__right">
+
+                <div class="phone-numbers">
+                    +375 (44) 272-57-42
+                    <br />
+                    +375 (33) 206-88-12
+                </div>
+                <a href="./404.html" class="privacy-policy">
+                    Политика
+                    <br />
+                    конфиденциальности
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- <footer></footer> -->
+    <div class="modal_wrapper">
+        <div class="modal_window ">
+            <button class="modal_close_button" title="закрыть модальное окно">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L22 22" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    <path d="M22 2L2 22" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <img class="modal_img" src="./img/products/тьерри-1173-Edit-Десерт-Тропический-с-творогом.jpg" />
+            <div class="modal_block">
+                <span class="modal_tag">Десерты</span>
+                <div class="sales-blocks__wrapper">
+                    <div class="sale-block sale-block__type">Новинка</div>
+                    <div class="sale-block sale-block__sale">-15%</div>
+                </div>
+                <div class="modal-title__wrapper">
+                    <h2 class="modal_title section-title">Тарт «Экзотика»</h2>
+                    <div class="modal_likes">
+                        <div class="likes__like clicked" title="Нравится">
+                        </div>
+                        <div class="card__rating">
+                            <p class="card__rating-number">3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_tastes-blocks__wrapper">
+                    <div class="modal_taste-block">Лимон</div>
+                    <div class="modal_taste-block">Банан</div>
+                    <div class="modal_taste-block">Апельсин</div>
+                </div>
+                <p class="modal_info">Песочный тарт, крем из маракуйи, желе из экзотических фруктов,
+                    воздушное безе, 550г.
+                </p>
+                <div class="modal_block__bottom">
+                    <div class="modal_block__price-wrapper">
+                        <s class="modal_block__old-price">21,8 руб.</s>
+                        <h3 class="modal_block__price">18,53 руб.</h3>
+                    </div>
+                    <div class="card__cart-btn card__cart-btn_active btn">
+                        В корзине &#10004;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
