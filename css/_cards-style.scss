@@ -10,12 +10,9 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    margin-bottom: 20px;
+    margin-bottom: $margin;
+    gap: $margin;
 }
-
-// .filters-block
-
-
 .card {
 
     display: flex;
@@ -23,11 +20,11 @@
     justify-content: space-between;
     width: 100%;
     min-width: 200px;
-    padding: 8px;
+    // padding: $min-padding;
     position: relative;
-    border-radius: 30px;
+    border-radius: $radius;
     cursor: pointer;
-    transition: .2s ease;
+    transition: $transition;
 
 
     &-main {
@@ -37,7 +34,7 @@
     &__img {
         width: 100%;
         height: 15vw;
-        border-radius: 25px;
+        border-radius: $radius;
         object-fit: cover;
     }
 
@@ -66,9 +63,9 @@
 
     &__rating {
         display: flex;
-        padding: 0px 8px;
+        padding: 0px $min-padding;
         font-weight: bold;
-        border-radius: 20px;
+        border-radius: $radius;
         font-size: 1em;
 
         &-number {
@@ -79,31 +76,31 @@
     }
 
     &__cart-btn {
-        border-color: $green;
+        // border-color: $green;
         border: 3px solid $green;
-        font-size: 0.92em;
+        font-size: 0.9em;
     }
 }
 
 
 .likes {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
+    bottom: $min-padding;
+    left: $min-padding;
     background-color: $white;
     display: flex;
     align-items: center;
-    padding: 8px;
-    border-radius: 30px;
+    padding: $min-padding;
+    border-radius: $radius;
     cursor: pointer;
-    transition: .2s ease;
+    transition: $transition;
 
     &__like {
         background: url(../img/icons/like.svg) no-repeat center;
         background-size: contain;
         width: 24px;
         height: 24px;
-        transition: .2s ease;
+        transition: $transition;
         cursor: pointer;
 
         &:hover,
@@ -124,7 +121,7 @@
 @media(max-width: 1440px) {
     .card__bottom {
         flex-direction: column;
-        gap: 8px;
+        gap: $min-padding;
     }
 
     .card {
@@ -132,7 +129,7 @@
         border-radius: 15px;
 
         &:hover {
-            background-color: #fff;
+            background-color: $white;
         }
 
         &__img {
@@ -148,7 +145,7 @@
     .sales-cards__wrapper {
         overflow-x: scroll;
         overflow-y: hidden;
-        gap: 12px;
+        gap: calc($margin / 2);
     }
 }
 
@@ -175,7 +172,7 @@
 @media (max-width: 600px) {
     .cards__wrapper,
     .sales-cards__wrapper {
-        gap: 8px;
+        gap: $min-padding;
     }
     .card {
         &__img {

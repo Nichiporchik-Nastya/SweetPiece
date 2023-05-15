@@ -3,6 +3,12 @@
     width: 100%;
 }
 
+.other-main {
+    margin-top: calc($margin * 4);
+}
+
+
+
 .hero-img__wrapper {
     height: 70vh;
 
@@ -21,26 +27,36 @@
 
     &__info {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 10%;
+        gap: 1vw;
     }
 
     &__paragraph {
         width: 20%;
+        gap: calc($margin / 2);
+        display: flex;
+        flex-direction: column;
         // line-height: 1.2em;
         // font-size: 1.2em;
     }
 }
 
-
-
-h1{
-    font-weight: bold;
-    font-size: 5em;
-    position: relative;
-    cursor: default;
+.hero-title__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: $margin;
 }
+
+.hero-btns{
+    display: flex;
+    gap: calc($margin / 2);
+    a,p{
+        margin: 0;
+    }
+}
+
 
 .hero-title {
 
@@ -99,12 +115,18 @@ h1{
     &-btn {
         margin: 0 auto;
         font-weight: bold;
+        color: $white;
 
         &:hover {
             animation: boncyBar $transition;
             color: $black;
         }
     }
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: $black;
 }
 
 
@@ -193,6 +215,7 @@ h1{
 
 }
 
+
 .benefits-blocks {
     display: flex;
     width: 50%;
@@ -222,6 +245,10 @@ h1{
         color: $light-text;
         margin-top: $margin / 2;
     }
+
+    // &__icon img{
+    //     height: 40px;
+    // }
 }
 
 .benefits-img-wrapper {
@@ -233,7 +260,7 @@ h1{
         height: 100%;
         border-radius: $radius;
         object-fit: cover;
-        object-position: top;
+        object-position: 35% 35%;
     }
 }
 
@@ -243,6 +270,9 @@ h1{
 
 .sale-card {
     width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
 
     &__img-wrapper {
         width: 100%;
@@ -283,6 +313,7 @@ h1{
 
 .search-input {
     width: 100%;
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -315,7 +346,7 @@ h1{
     margin: 4px 8px;
     cursor: pointer;
 
-    
+
 
     &:hover {
         background-color: rgba(243, 243, 243, 0.5);
@@ -366,6 +397,136 @@ h1{
     // }
 }
 
+////////////////////////////////////////////////
+.modal {
+    &_wrapper {
+        opacity: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: opacity .2s;
+        z-index: 100;
+    }
+
+    &_window {
+        max-width: 75%;
+        background-color: $white;
+        opacity: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: calc($margin * 4);
+        padding: calc($margin * 2);
+        border-radius: $radius;
+        transform: translateY(-10%);
+        transition: $transition;
+        transition-delay: .2s;
+        margin: 0 auto;
+    }
+
+    &-title__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: $margin;
+    }
+
+    &_likes {
+        display: flex;
+        align-items: center;
+    }
+
+    &_img {
+        border-radius: $radius;
+        width: 50%;
+        // height: 100%;
+        object-fit: cover;
+    }
+
+    &_info {
+        max-width: 60%;
+    }
+
+    &_tag {
+        display: inline-block;
+        color: $light-text;
+        margin-bottom: calc($margin / 2);
+    }
+
+    &_block {
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: calc($margin * 2);
+        }
+
+        &__price {
+            font-weight: bold;
+        }
+    }
+}
+
+s {
+    color: $light-text;
+    margin-bottom: 8px;
+}
+
+.is-open>.modal_window {
+    /* эти стили применяются к .modal_window и .modal_img_window, когда у родительского элемента (.modal_wrapper/ .modal_img_wrapper) есть класс .is-open*/
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.modal_close_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: $margin;
+}
+
+.modal_tastes-blocks__wrapper,
+.sales-blocks__wrapper {
+    display: flex;
+    gap: calc($margin / 2);
+    margin-bottom: calc($margin * 1.5);
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.modal_taste-block,
+.sale-block {
+    padding: 8px 24px;
+
+    border-radius: $radius;
+    background-color: $light;
+}
+
+.sale-block {
+    color: $white;
+    font-weight: bold;
+
+    &__type {
+        background-color: $yellow;
+    }
+
+    &__sale {
+        background-color: $green;
+    }
+}
+
+.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
 
 /*////////////////////////////////////////////////////////////////*/
 
@@ -391,14 +552,19 @@ h1{
         width: 15vw;
     }
 
-
-
     .benefits-img-wrapper {
         width: 45%;
     }
 
     .taste-block__group {
         gap: $margin ;
+    }
+
+    .modal {
+        &_window {
+            padding: calc($margin * 2);
+            gap: calc($margin * 3);
+        }
     }
 }
 
@@ -408,12 +574,17 @@ h1{
 
 @media (max-width: 1024px) {
 
+    .hero-btns{
+        justify-content: center;
+    }
+
     .benefits-section {
         &-bottom {
             flex-direction: column-reverse;
         }
 
     }
+
     .benefits-blocks {
         width: 100%;
         flex-wrap: nowrap;
@@ -474,10 +645,23 @@ h1{
             width: 50%;
         }
     }
+
     .search-tags {
         width: 50%;
     }
-    
+
+    .modal {
+        &_window {
+            flex-direction: column;
+            gap: $margin;
+        }
+
+        &_img {
+            width: 100%;
+            height: 30vh;
+        }
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -507,13 +691,12 @@ h1{
     }
 
     .sale-card {
-        &__img-wrapper {
-            height: 25vh;
-        }
-
         width: 100%;
     }
 
+    .other-main {
+        margin-top: calc($margin * 3);
+    }
 
     .taste-block {
         &__img {
@@ -532,8 +715,18 @@ h1{
         gap: $margin !important;
     }
 
+    .sale-card__img-wrapper {
+        height: 40vh;
+    }
+
     .taste-block__group:last-child {
         display: none;
+    }
+
+    .modal {
+        &_window {
+            padding: $margin;
+        }
     }
 }
 
@@ -555,20 +748,46 @@ h1{
     .category-cards__wrapper {
         gap: $min-padding;
     }
+
     .search-input {
         &__wrapper {
             width: 95%;
         }
     }
 
+    .modal {
+        &_window {
+            max-width: 95%;
+        }
+    }
+
+    // .taste-block {
+    //     &__title {
+    //         margin-bottom: calc($min-padding / 2);
+    //     }
+
+    //     &__img {
+    //         width: 14vw;
+    //         border-radius: calc($radius / 2);
+    //     }
+    // }
 
     .taste-block {
-        &__title{
-            margin-bottom: calc($min-padding / 2);
-        }
+        width: 45vw;
+
         &__img {
-            width: 14vw;
-            border-radius: calc($radius / 2);
+            width: 16vw;
+        }
+    }
+
+    .taste-block__wrapper {
+        justify-content: flex-start;
+        gap: $margin;
+    }
+
+    .taste-block__group {
+        &:last-child {
+            display: flex;
         }
     }
 
@@ -593,6 +812,10 @@ h1{
         }
     }
 
+    .sale-card__img-wrapper {
+        height: 30vh;
+    }
+
     h3 {
         //&__title
         font-size: 1.2em;
@@ -609,41 +832,46 @@ h1{
     }
 
 
+
     .main {
         margin-top: 120px;
+    }
+
+    .other-main {
+        margin-top: calc($margin * 3);
     }
 
     .hero-block__paragraph {
         width: 90%;
     }
 
-    .taste-block {
-        width: 45vw;
 
-        &__img {
-            width: 16vw;
+
+    .modal_tastes-blocks__wrapper,
+    .sales-blocks__wrapper {
+        gap: calc($margin / 2);
+        margin-bottom: calc($margin / 2);
+    }
+
+    .modal {
+        &_window {
+            gap: calc($margin / 2);
+        }
+
+        &_tag {
+            font-size: 0.8em;
+        }
+
+        &_info {
+            margin-top: $margin;
+            max-width: 100%;
         }
     }
 
-    .taste-block__wrapper {
-        justify-content: flex-start;
-        gap: $margin;
+    .modal_taste-block,
+    .sale-block {
+        font-size: 0.8em;
     }
-
-    .taste-block__group {
-        &:last-child {
-            display: flex;
-        }
-        // display: flex;
-        // justify-content: space-between;
-
-        // gap: 0px;
-    }
-
-
-    // h6 { //.hero-block__paragraph
-    //     font-size: 1em;
-    // }
 }
 
 @media(max-width: 360px) {
@@ -651,10 +879,14 @@ h1{
         justify-content: space-between;
         gap: 0px;
     }
+
     .taste-block__group {
         margin-bottom: $margin;
     }
+
     .benefits-block {
         width: 100%;
     }
+
+
 }

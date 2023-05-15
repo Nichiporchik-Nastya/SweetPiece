@@ -1,0 +1,252 @@
+.sections-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: calc($margin * 2);
+}
+
+.account-info__block {
+    display: flex;
+    flex-direction: column;
+    gap: calc($margin / 2);
+}
+
+.cart-cards__wrapper {
+    display: grid;
+    width: 60vw;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: $margin;
+}
+
+.account-info {
+    margin-bottom: calc($margin * 2);
+}
+
+.cart {
+    margin-bottom: calc($margin * 4);
+}
+
+
+.cart {
+    &-card {
+        display: flex;
+        align-items: start;
+        // justify-content: space-between;
+        gap: calc($margin / 2);
+
+        &__img {
+            border-radius: 8px;
+            width: 10vw;
+        }
+
+        &__info {
+            // color: red;
+            display: flex;
+            flex-direction: column;
+            gap: calc($margin / 2);
+            // justify-content: space-between;
+            height: 100%;
+        }
+
+        &__price {
+            font-weight: bold;
+        }
+
+        &__counter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 75%;
+            padding: 0.2em 0.6em;
+            border-radius: $radius;
+            border: $borderThickness solid $light;
+
+            &-count {
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid $border;
+    margin-top: $margin;
+    padding: calc($margin / 2);
+
+    &__top,
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: calc($margin / 2);
+
+        .section-btn {
+            margin: 0;
+        }
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+}
+
+
+
+
+.favorites {
+    &-cards__wrapper {
+        display: flex;
+        max-width: 100vw;
+        overflow-y: scroll;
+        gap: $margin;
+    }
+
+    &-card {
+
+
+        &__img {
+            border-radius: $radius;
+            width: 18vw;
+        }
+
+        &__title {
+            font-weight: bold;
+            margin: 12px 0px 8px;
+        }
+
+        &__price {
+            line-height: 1.5em;
+
+        }
+
+        &-btn {
+            border-color: $green !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 1440px) {
+    .cart-cards__wrapper {
+        width: 100%;
+    }
+
+    .cart-cards__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .sections-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: $margin;
+    }
+
+    .cart-cards__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cart-card__img {
+        width: 12vw;
+    }
+
+    .favorites {
+        &-cards__wrapper {
+            gap: calc($margin / 2);
+        }
+
+        &-card__img {
+            min-width: 30vw;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-cards__wrapper {
+        gap: calc($margin / 2);
+    }
+
+    .cart-card__img {
+        width: 16vw;
+    }
+
+    .cart-cards__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-card__img {
+        width: 20vw;
+    }
+
+    .favorites-card__img {
+        min-width: 40vw;
+    }
+
+
+}
+
+@media(max-width: 480px) {
+    .cart-cards__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-card__img {
+        width: 24vw;
+    }
+
+    .favorites-card__img {
+        min-width: 50vw;
+    }
+    .cart-card__remove-btn {
+        margin-left: 40%;
+    }
+}
+
+@media(max-width: 360px) {
+    .cart-card__img {
+        width: 30vw;
+    }
+
+    .cart-card__remove-btn {
+        margin-left: 10%;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+        gap: $margin;
+    }
+    .favorites-card__img {
+        min-width: 70vw;
+    }
+}

@@ -51,15 +51,22 @@ body {
     position: relative;
 }
 
-.body-overflow {
-    overflow: hidden;
-}
+// .body-overflow {
+//     overflow: hidden;
+// }
 
 .container {
     padding: 0 120px;
     // display: block;
 }
 
+h1{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 4.5em;
+    position: relative;
+    cursor: default;
+}
 h2 {
     font-size: 2.5em;
 }
@@ -113,6 +120,10 @@ h6 {
 
 a {
     color: inherit;
+
+    &:active{
+        transform: translateY(1px);
+    }
 }
 
 @import '_header-style.scss';
@@ -121,6 +132,8 @@ a {
 @import '_footer-style.scss';
 @import '_reg-auth-style.scss';
 @import '_menu-style.scss';
+@import '_sales-style.scss';
+@import '_account-style.scss';
 
 
 // @import '_scroll-anim.sass';

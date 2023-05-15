@@ -119,7 +119,7 @@
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    gap: $gap;
+    gap: $min-padding;
 
 
     &__secondary {
@@ -249,7 +249,7 @@
 
 @media(max-width: 1024px) {
     .container {
-        padding: calc($min-padding / 2) $min-padding ;
+        padding: calc($min-padding / 2) calc($margin / 2) ;
     }
 
     .logo__title {
@@ -333,5 +333,8 @@
 @media (max-width: 360px) {
     .search__link {
         display: none;
+    }
+    .header-btns{
+        gap: 0;
     }
 }
