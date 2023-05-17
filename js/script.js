@@ -106,11 +106,11 @@ function closeModal() {
     window.removeEventListener("scroll", StopScroll);
 };
 
-// let backBtn = document.querySelector(".back-btn");
-// if(backBtn){
-//     backBtn.onclick = () => {
-//         // window.location = history.back();
-//         history.back();
-//     }
-// }
+let backBtn = document.querySelector(".back-btn");
+if(backBtn){
+    backBtn.onclick = () => {
+        // window.location = history.back();
+        history.back();
+    }
+}
 

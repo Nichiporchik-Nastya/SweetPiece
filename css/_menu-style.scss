@@ -27,6 +27,11 @@
     gap: $margin;
     align-items: center;
     margin: calc($margin / 2) 0px;
+    background-color: $white;
+    padding: $min-padding 0;
+    position: sticky;
+    top: 50px; //50 - хедер
+    z-index: 1;
 }
 
 .close-filters-btn {
@@ -155,7 +160,7 @@ input[type='checkbox']:checked::after {
 .menu-cards__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 80vh;
+    height: 95vh;
     overflow-y: scroll;
     min-width: 100%;
     gap: calc($margin / 2);
@@ -176,14 +181,17 @@ input[type='checkbox']:checked::after {
     .filters-block {
         position: fixed;
         background-color: $white;
+        overflow-y: scroll;
         z-index: 1;
         width: 65%;
-        height: 100%;
-        top: 25%;
+        max-height: 75vh;
+        // top: 25%;
+        bottom: 0;
         right: 0;
         padding-left: $margin;
         padding-right: $min-padding;
         padding-top: $margin;
+        padding-bottom: $margin;
         transform: translateX(100%);
         transition: $transition;
         border-radius: $radius 0 0 0;
@@ -193,6 +201,7 @@ input[type='checkbox']:checked::after {
         box-shadow: 0 0 0 500px rgba($color: $black, $alpha: 0.5);
         transform: translateX(0);
         display: block;
+        z-index: 2;
     }
 
     .show-filters-btn {
