@@ -46,7 +46,9 @@
 
     &__info {
         color: $light-text;
-        line-height: 1.5em;
+        line-height: 1.2em;
+        max-height: 3.8em;
+        overflow-y: hidden;
     }
 
     &__price {
@@ -76,10 +78,16 @@
     }
 
     &__cart-btn {
-        // border-color: $green;
         border: 3px solid $green;
         font-size: 0.9em;
         background-color: $white;
+
+        border-radius: $radius;
+        cursor: pointer;
+        transition: $transition;
+        padding: 10px 22px;
+        text-align: center;
+        display: inline-block;
     }
 }
 
@@ -113,7 +121,6 @@
 }
 
 
-.card:hover .card__cart-btn,
 .card__cart-btn_active {
     background-color: $green;
     color: $white;

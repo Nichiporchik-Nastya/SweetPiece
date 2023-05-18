@@ -27,7 +27,7 @@
     <header class="header">
         <div class="header__top container">
             <nav class="nav-static">
-                <a href="/" class="logo">
+                <a href="./index.html" class="logo">
                     <div class="logo__link">
                         <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent"
                             speed="1" style="height: 3em;" hover></lottie-player>
@@ -46,10 +46,7 @@
                         <a href="./sales.html" class="header-btns__btn btn" id="about">Скидки</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn" id="contacts">Отзывы</a>
-                    </li>
-                    <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn" id="shops">О нас</a>
+                        <a href="./about.html" class="header-btns__btn btn" id="shops">О нас</a>
                     </li>
                 </ul>
             </nav>
@@ -96,31 +93,28 @@
                         <a href="./sales.html" id="sales">Скидки</a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="#" id="reviews">Отзывы</a>
-                    </li>
-                    <li class="burger-menu__nav-item">
-                        <a href="#" id="about">О нас</a>
+                        <a href="./about.html" id="about">О нас</a>
                     </li>
                 </ul>
                 <div class="burger-menu__nav-title">Категории</div>
                 <ul class="burger-menu__nav">
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Выпечка
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Десерты
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Конфеты
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Наборы
                         </a>
                     </li>
@@ -156,92 +150,110 @@
     </header>
     <main class="container main other-main">
         <div class="sections-wrapper">
-            
+
             <section class="cart">
                 <h2 class="section-title animated-item" style="--item-index:1;">Корзина</h2>
                 <div class="cart-cards__wrapper">
                     <div class="cart-card animated-item" style="--item-index:2;">
-                        <img src="./img/products/image 73.png" class="cart-card__img" alt="Изображение товара"></img>
-                        <div class="cart-card__info">
-                            <div class="cart-card__title">Клубничное мороженое</div>
-                            <h3 class="cart-card__price">2,5 руб.</h3>
-                            <h3 class="cart-card__counter">
-                                -
-                                <div class="cart-card__counter-count">2</div>
-                                +
-                            </h3>
-                        </div>
-                        <div class="cart-card__remove-btn">
-                            <img src="./img/icons/remove.svg" alt="удалить">
-                        </div>
-                    </div>
-                    <div class="cart-card animated-item" style="--item-index:3;">
-                        <img src="./img/products/image 73.png" class="cart-card__img" alt="Изображение товара"></img>
-                        <div class="cart-card__info">
-                            <div class="cart-card__title">Клубничное мороженое</div>
-                            <h3 class="cart-card__price">2,5 руб.</h3>
-                            <h3 class="cart-card__counter">
-                                -
-                                <div class="cart-card__counter-count">2</div>
-                                +
-                            </h3>
-                        </div>
-                        <div class="cart-card__remove-btn">
-                            <img src="./img/icons/remove.svg" alt="удалить">
-                        </div>
-                    </div>
-                    <div class="cart-card animated-item" style="--item-index:4;">
-                        <img src="./img/products/image 73.png" class="cart-card__img" alt="Изображение товара"></img>
-                        <div class="cart-card__info">
-                            <div class="cart-card__title">Клубничное мороженое</div>
-                            <h3 class="cart-card__price">2,5 руб.</h3>
-                            <h3 class="cart-card__counter">
-                                -
-                                <div class="cart-card__counter-count">2</div>
-                                +
-                            </h3>
-                        </div>
-                        <div class="cart-card__remove-btn">
-                            <img src="./img/icons/remove.svg" alt="удалить">
-                        </div>
-                    </div>
-                    <div class="cart-card animated-item" style="--item-index:5;">
-                        <img src="./img/products/image 73.png" class="cart-card__img" alt="Изображение товара"></img>
-                        <div class="cart-card__info">
-                            <div class="cart-card__title">Клубничное мороженое</div>
-                            <h3 class="cart-card__price">2,5 руб.</h3>
-                            <h3 class="cart-card__counter">
-                                -
-                                <div class="cart-card__counter-count">2</div>
-                                +
-                            </h3>
-                        </div>
-                        <div class="cart-card__remove-btn">
-                            <img src="./img/icons/remove.svg" alt="удалить">
-                        </div>
-                    </div>
-                    <div class="cart-card animated-item" style="--item-index:6;">
-                        <img src="./img/products/image 73.png" class="cart-card__img" alt="Изображение товара"></img>
-                        <div class="cart-card__info">
-                            <div class="cart-card__title">Клубничное мороженое</div>
-                            <h3 class="cart-card__price">2,5 руб.</h3>
-                            <h3 class="cart-card__counter">
-                                -
-                                <div class="cart-card__counter-count">2</div>
-                                +
-                            </h3>
+                        <div class="cart-card__main">
+                            <img src="./img/products/image 75.png" class="cart-card__img"
+                                alt="Изображение товара"></img>
+                            <div class="cart-card__info">
+                                <div class="cart-card__title">Торт «Лакомый кусочек»</div>
+                                <h3 class="cart-card__price">11,5 руб.</h3>
+                                <h3 class="cart-card__counter">
+                                    -
+                                    <div class="cart-card__counter-count">1</div>
+                                    +
+                                </h3>
+                            </div>
                         </div>
                         <div class="cart-card__remove-btn">
                             <img src="./img/icons/remove.svg" alt="удалить">
                         </div>
                     </div>
 
-                    
+                    <div class="cart-card animated-item" style="--item-index:2;">
+                        <div class="cart-card__main">
+                            <img src="./img/products/hrupkoe-pechene-s-saharom-scaled.jpg" class="cart-card__img"
+                                alt="Изображение товара"></img>
+                            <div class="cart-card__info">
+                                <div class="cart-card__title">Сахарное печенье</div>
+                                <h3 class="cart-card__price">8,25 руб.</h3>
+                                <h3 class="cart-card__counter">
+                                    -
+                                    <div class="cart-card__counter-count">3</div>
+                                    +
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__remove-btn">
+                            <img src="./img/icons/remove.svg" alt="удалить">
+                        </div>
+                    </div>
+
+                    <div class="cart-card animated-item" style="--item-index:2;">
+                        <div class="cart-card__main">
+                            <img src="./img/products/1.jpg" class="cart-card__img" alt="Изображение товара"></img>
+                            <div class="cart-card__info">
+                                <div class="cart-card__title">Даниш с малиной</div>
+                                <h3 class="cart-card__price">7,5 руб.</h3>
+                                <h3 class="cart-card__counter">
+                                    -
+                                    <div class="cart-card__counter-count">2</div>
+                                    +
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__remove-btn">
+                            <img src="./img/icons/remove.svg" alt="удалить">
+                        </div>
+                    </div>
+
+                    <div class="cart-card animated-item" style="--item-index:2;">
+                        <div class="cart-card__main">
+                            <img src="./img/products/3.jpg" class="cart-card__img" alt="Изображение товара"></img>
+                            <div class="cart-card__info">
+                                <div class="cart-card__title">Слойка шведская с кардамоном</div>
+                                <h3 class="cart-card__price">3,4 руб.</h3>
+                                <h3 class="cart-card__counter">
+                                    -
+                                    <div class="cart-card__counter-count">2</div>
+                                    +
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__remove-btn">
+                            <img src="./img/icons/remove.svg" alt="удалить">
+                        </div>
+                    </div>
+
+                    <div class="cart-card animated-item" style="--item-index:2;">
+                        <div class="cart-card__main">
+                            <img src="./img/products/4.jpg" class="cart-card__img" alt="Изображение товара"></img>
+                            <div class="cart-card__info">
+                                <div class="cart-card__title">Даниш с персиком</div>
+                                <h3 class="cart-card__price">4,5 руб.</h3>
+                                <h3 class="cart-card__counter">
+                                    -
+                                    <div class="cart-card__counter-count">2</div>
+                                    +
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__remove-btn">
+                            <img src="./img/icons/remove.svg" alt="удалить">
+                        </div>
+                    </div>
+
+
+
                 </div>
                 <div class="cart-actions">
                     <div class="cart-actions__top">
                         <p class="cart-actions__text animated-item" style="--item-index:7;">Может, ещё кусочек?</p>
-                        <a href="./menu.html" class="btn section-btn secondary-btn animated-item" style="--item-index:8;">
+                        <a href="./menu.html" class="btn section-btn secondary-btn animated-item"
+                            style="--item-index:8;">
                             В каталог
                         </a>
                     </div>
@@ -249,7 +261,7 @@
                         <h3 class="cart-actions__price animated-item" style="--item-index:7;">
                             Итого 122.80 руб.
                         </h3>
-                        <a href="#" class="btn section-btn animated-item" style="--item-index:8;">
+                        <a href="./404.html" class="btn section-btn animated-item" style="--item-index:8;">
                             К оформлению
                         </a>
                     </div>
@@ -275,14 +287,14 @@
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">27</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/2.jpg" alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
+                    <h3 class="favorites-card__title">Слойка с вишней</h3>
+                    <div class="favorites-card__price">3,5 руб</div>
+                    <div class="favorites-btn card__cart-btn">
                         В корзину
                     </div>
                 </div>
@@ -292,83 +304,89 @@
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">8</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/3.jpg" alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
-                        В корзину
+                    <h3 class="favorites-card__title">Слойка шведская с кардамоном</h3>
+                    <div class="favorites-card__price">3,4 руб</div>
+                    <div class="favorites-btn card__cart-btn card__cart-btn_active">
+                        В корзине &#10004;
                     </div>
                 </div>
+
                 <div class="favorites-card">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">1</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/5.jpg" alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
+                    <h3 class="favorites-card__title">Даниш с клубникой</h3>
+                    <div class="favorites-card__price">4,5 руб</div>
+                    <div class="favorites-btn card__cart-btn ">
                         В корзину
                     </div>
                 </div>
+
                 <div class="favorites-card">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">88</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/image 97.png" alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
+                    <h3 class="favorites-card__title">Тарт «Экзотика»</h3>
+                    <div class="favorites-card__price">8,5 руб</div>
+                    <div class="favorites-btn card__cart-btn ">
                         В корзину
                     </div>
                 </div>
+
                 <div class="favorites-card">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">75</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/hrupkoe-pechene-s-kakao-scaled.jpg.png"
+                            alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
+                    <h3 class="favorites-card__title">Чёрное и белое</h3>
+                    <div class="favorites-card__price">8,25 руб</div>
+                    <div class="favorites-btn card__cart-btn ">
                         В корзину
                     </div>
                 </div>
+
                 <div class="favorites-card">
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
                             </div>
                             <div class="card__rating">
-                                <p class="card__rating-number">3</p>
+                                <p class="card__rating-number">52</p>
                             </div>
                         </div>
-                        <img class="favorites-card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                        <img class="favorites-card__img" src="./img/products/hrupkoe-pechene-s-saharom-scaled.jpg"
+                            alt="Изображение товара">
                     </div>
-                    <h3 class="favorites-card__title">Сладость</h3>
-                    <div class="favorites-card__price">100.00 руб</div>
-                    <div class="favorites-btn secondary-btn btn">
-                        В корзину
+                    <h3 class="favorites-card__title">Сахарное печенье</h3>
+                    <div class="favorites-card__price">8,25 руб</div>
+                    <div class="favorites-btn card__cart-btn card__cart-btn_active">
+                        В корзине &#10004;
                     </div>
                 </div>
             </div>
@@ -383,16 +401,16 @@
                     <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">пр-т Независимости, 168/1</div>
+                    <div class="address-block__subtitle">ст. м. «Уручье»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">пр-т Независимости, 44</div>
+                    <div class="address-block__subtitle">ст. м. «Площадь Победы»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">ул. Жуковая, 23к1</div>
+                    <div class="address-block__subtitle">ст. м. «Грушевка»</div>
                 </div>
             </div>
             <div class="copyright">

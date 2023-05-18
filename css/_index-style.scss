@@ -482,11 +482,11 @@
     }
 
     &_block {
-
         &__bottom {
             display: flex;
             justify-content: space-between;
             margin-top: calc($margin * 2);
+            width: 100%;
         }
 
         &__price {
@@ -513,6 +513,7 @@ s {
     top: 0;
     right: 0;
     margin: $margin;
+    cursor: pointer;
 }
 
 .modal_tastes-blocks__wrapper,
@@ -569,6 +570,7 @@ s {
 
 .map-block__wrapper {
     width: 100%;
+
     .address-blocks__wrapper {
         margin-bottom: $margin;
         row-gap: calc($margin / 2);
@@ -583,9 +585,41 @@ s {
 
     .section-paragraph {
         margin-bottom: $margin;
-        
+
     }
 }
+
+.other-contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $margin;
+}
+
+.history-blocks__wrapper {
+    display: flex;
+    gap: $margin;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: $margin;
+    border-bottom: $borderThickness solid $orange;
+    position: relative;
+
+}
+
+.history-block {
+    min-width: 450px;
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: calc($margin / 2);
+    }
+
+    &__info {
+        line-height: 1.2em;
+    }
+}
+
+
 
 /*////////////////////////////////////////////////////////////////*/
 
@@ -606,7 +640,7 @@ s {
         }
     }
 
-    .ymap{
+    .ymap {
         height: 400px;
     }
 
@@ -744,15 +778,21 @@ s {
 
         .contacts-block__info {
             flex-direction: row;
+            flex-wrap: wrap;
             width: 100%;
-            
+
 
             .section-paragraph {
-                // max-width: 25vw;
+                max-width: 42vw;
                 flex-direction: column;
                 margin-right: 10%;
             }
         }
+    }
+
+    .other-contacts__wrapper {
+        flex-direction: row;
+        gap: calc($margin * 2);
     }
 
     .map-block__wrapper {
@@ -766,11 +806,9 @@ s {
         }
     }
 
-    .ymap{
+    .ymap {
         height: 450px;
     }
-
-
 }
 
 @media (max-width: 768px) {
@@ -851,9 +889,11 @@ s {
         }
     }
 
-    .contacts-block__info{
+    .contacts-block__info {
         flex-direction: column;
         width: 100%;
+        padding-bottom: $margin;
+        border-bottom: 1px solid $border;
     }
 
     .map-block__wrapper {
@@ -863,6 +903,10 @@ s {
             flex-direction: row;
             width: 100%;
         }
+    }
+
+    .section-paragraph {
+        min-width: 100%;
     }
 }
 
@@ -1013,6 +1057,10 @@ s {
     .modal_taste-block,
     .sale-block {
         font-size: 0.8em;
+    }
+
+    .history-block {
+        min-width: 450px;
     }
 }
 

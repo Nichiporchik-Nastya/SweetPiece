@@ -27,10 +27,10 @@
     <header class="header">
         <div class="header__top container">
             <nav class="nav-static">
-                <a href="/" class="logo">
+                <a href="./index.html" class="logo">
                     <div class="logo__link">
-                        <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent" speed="1"
-                            style="height: 3em;" hover></lottie-player>
+                        <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent"
+                            speed="1" style="height: 3em;" hover></lottie-player>
                         <img class="logo__img" src="./img/logo.svg" alt="Логотип" title="На главную">
                     </div>
                     <div class="logo__title">
@@ -40,23 +40,20 @@
                 </a>
                 <ul class="nav-static__menu">
                     <li class="nav-static__menu-item">
-                        <a href="./menu.html" class="header-btns__btn btn id=" menu">Меню</a>
+                        <a href="./menu.html" class="header-btns__btn btn" id="menu">Меню</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn id=" about">Скидки</a>
+                        <a href="./sales.html" class="header-btns__btn btn" id="about">Скидки</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn id=" contacts">Отзывы</a>
-                    </li>
-                    <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn id=" shops">О нас</a>
+                        <a href="./about.html" class="header-btns__btn btn" id="shops">О нас</a>
                     </li>
                 </ul>
             </nav>
-    
+
             <div class="header-btns">
                 <a href="./menu.html" class="search__link btn">
-                    <img src="img/icons/search.svg" class="search__icon">
+                    <img src="img/icons/search.svg" class="search__icon" alt="Поиск...">
                 </a>
                 <a href="tel:+375332068812" class="header-btns__btn btn">
                     +375 (33) 206-88-12
@@ -68,11 +65,11 @@
                     Зарегистрироваться
                 </a>
                 <lottie-player class="burger-btn reverseEffect" src="./animations/menuV2.json" speed="1"
-                    style="fill: #fff; height: 3em; width: 40px;"></lottie-player>
+                    style="height: 3em; width: 40px;" alt="Бургер-меню"></lottie-player>
             </div>
         </div>
-    
-    
+
+
         <div class="container burger-menu">
             <div class="header-btns">
                 <a href="./auth.html" class="header-btns__secondary btn">
@@ -82,7 +79,7 @@
                     Зарегистрироваться
                 </a>
             </div>
-    
+
             <div class="burger-menu__nav-wrapper">
                 <div class="burger-menu__nav-title">Разделы</div>
                 <ul class="burger-menu__nav">
@@ -93,13 +90,10 @@
                         <a href="./menu.html" id="menu">Меню</a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="#" id="sales">Скидки</a>
+                        <a href="./sales.html" id="sales">Скидки</a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="#" id="reviews">Отзывы</a>
-                    </li>
-                    <li class="burger-menu__nav-item">
-                        <a href="#" id="about">О нас</a>
+                        <a href="./about.html" id="about">О нас</a>
                     </li>
                 </ul>
                 <div class="burger-menu__nav-title">Категории</div>
@@ -128,19 +122,19 @@
             </div>
             <div>
                 <ul class="burger-menu__social-links">
-                    <li class="" title="Вконтакте">
-                        <a href="#" class="">
+                    <li title="Вконтакте">
+                        <a href="https:/vk.com/">
                             Вконтакте
                         </a>
                     </li>
-                    <li class="" title="Telegram">
-                        <a href="#" class="">
+                    <li title="Telegram">
+                        <a href="https:/telegram.org/">
                             Telegram
                         </a>
                     </li>
-                    <li class="">
-                        <a href="#" class="" title="Whatsapp">
-                            Whatsapp
+                    <li>
+                        <a href="https:/viber.com/" title="Viber">
+                            Viber
                         </a>
                     </li>
                 </ul>
@@ -160,7 +154,8 @@
             <div class="menu-blocks__wrapper">
                 <div class="filters-block">
                     <div class="filters-block__title-wrapper">
-                        <h3 class="filters-block__title filters-block__title_first animated-item" style="--item-index:1;">Сортировать по:</h3>
+                        <h3 class="filters-block__title filters-block__title_first animated-item"
+                            style="--item-index:1;">Сортировать по:</h3>
                         <div class="close-filters-btn">
                             <img src="./img/icons/close.svg" alt="закрыть">
                         </div>
@@ -203,22 +198,103 @@
                             <h3 class="filters-block__title">Вкусы</h3>
 
                             <div class="filters-block__input-wrapper">
-                                <input type="checkbox" name="tastes" id="taste" value="fghjkl">
-                                <label for="taste">fghjkl</label>
+                                <input type="checkbox" name="tastes" id="taste-1">
+                                <label for="taste-1">Лимон</label>
                             </div>
-                            <div class="show-more">Ещё</div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="tastes" id="taste-2">
+                                <label for="taste-2">Шоколад</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="tastes" id="taste-3">
+                                <label for="taste-3">Клубника</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="tastes" id="taste-4">
+                                <label for="taste-4">Банан</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="tastes" id="taste-5">
+                                <label for="taste-5">Малина</label>
+                            </div>
+
+                            <div class="show-more animated-item">Ещё</div>
                             <div class="hidden-block">
                                 <div class="filters-block__input-wrapper">
-                                    <input type="checkbox" name="tastes" id="taste" value="fghjkl">
-                                    <label for="taste">fghjkl</label>
+                                    <input type="checkbox" name="tastes" id="taste-6">
+                                    <label for="taste-6">Ваниль</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-7">
+                                    <label for="taste-7">Орехи</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-7">
+                                    <label for="taste-7">Яблоко</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-8">
+                                    <label for="taste-8">Апельсин</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-9">
+                                    <label for="taste-9">Персик</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-10">
+                                    <label for="taste-10">Черника</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-11">
+                                    <label for="taste-11">Вишня</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-12">
+                                    <label for="taste-12">Мёд</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-13">
+                                    <label for="taste-13">Сливки</label>
+                                </div>
+
+                                <div class="filters-block__input-wrapper">
+                                    <input type="checkbox" name="tastes" id="taste-14">
+                                    <label for="taste-14">Морковь</label>
                                 </div>
                             </div>
                         </div>
                         <div class="filters-block__items-block-wrapper animated-item" style="--item-index:11;">
                             <h3 class="filters-block__title">Категории</h3>
                             <div class="filters-block__input-wrapper">
-                                <input type="checkbox" name="categories" id="category" value="jhgfd">
-                                <label for="category">jhgfd</label>
+                                <input type="checkbox" name="categories" id="category-1">
+                                <label for="category-1">Выпечка</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="categories" id="category-2">
+                                <label for="category-2">Десерты</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="categories" id="category-3">
+                                <label for="category-3">Конфеты</label>
+                            </div>
+
+                            <div class="filters-block__input-wrapper">
+                                <input type="checkbox" name="categories" id="category-4">
+                                <label for="category-4">Наборы</label>
                             </div>
                         </div>
                     </div>
@@ -232,227 +308,225 @@
                             <input class="search-input" type="text" placeholder="Малиновый конфи.." maxlength="50"
                                 name="search-input">
                         </div>
-                        <div class="show-filters-btn animated-item" style="--item-index:2;">
+                        <div class="show-filters-btn">
                             <img src="./img/icons/filters.svg" alt="фильтры">
                         </div>
                     </div>
                     <div class="menu-cards__wrapper animated-item" style="--item-index:3;">
-                        <div class="card">
+                        <div class="card" data-product="0">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">25</p>
                                     </div>
                                 </div>
                                 <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <h3 class="card__title">Даниш с малиной</h3>
+                            <p class="card__info">Сливочная слойка с ягодами малины, заварным кремом Патисьер</p>
+                            <p class="card__info">110г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
+                                <h3 class="card__price">7,5 руб.</h3>
+                                <div class="card__cart-btn card__cart-btn_active ">
                                     В корзине &#10004;
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="1">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like clicked" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">27</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/2.jpg" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <h3 class="card__title">Слойка с вишней</h3>
+                            <p class="card__info">Французская сливочная слойка с начинкой из вишен, глазирована желе</p>
+                            <p class="card__info">70г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
+                                <h3 class="card__price">3,5 руб.</h3>
+                                <div class="card__cart-btn ">
+                                    В корзину
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card" data-product="2">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like clicked" title="Нравится">
+                                    </div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">8</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/3.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">Слойка шведская с кардамоном</h3>
+                            <p class="card__info">Сливочная слойка с вишней, апельсином и кардамоном</p>
+                            <p class="card__info">100г.</p>
+                            <div class="card__bottom">
+                                <h3 class="card__price">3,4 руб.</h3>
+                                <div class="card__cart-btn card__cart-btn_active ">
                                     В корзине &#10004;
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="1">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">18</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/4.jpg" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <h3 class="card__title">Даниш с персиком</h3>
+                            <p class="card__info">Сливочная слойка с персиком, заварным кремом Патисьер и желе</p>
+                            <p class="card__info">120г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
+                                <h3 class="card__price">4,5 руб.</h3>
+                                <div class="card__cart-btn card__cart-btn_active ">
                                     В корзине &#10004;
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="1">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like clicked" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">1</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/5.jpg" alt="Изображение товара">
+                            </div>
+                            <h3 class="card__title">Даниш с клубникой</h3>
+                            <p class="card__info">Сливочная слойка с персиком, заварным кремом Патисьер и желе</p>
+                            <p class="card__info">120г.</p>
+                            <div class="card__bottom">
+                                <h3 class="card__price">4,5 руб.</h3>
+                                <div class="card__cart-btn ">
+                                    В корзину
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-product="16">
+                            <div class="card-main">
+                                <div class="likes">
+                                    <div class="likes__like" title="Нравится">
+                                    </div>
+                                    <div class="card__rating">
+                                        <p class="card__rating-number">95</p>
+                                    </div>
+                                </div>
+                                <img class="card__img" src="./img/products/image 75.png" alt="Изображение товара">
                             </div>
                             <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <p class="card__info">Фирменный десерт нашей кондитерской. Каждый кусочек имеет свой неповторимый вкус</p>
+                            <p class="card__info">230г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
+                                <h3 class="card__price">11,5 руб.</h3>
+                                <div class="card__cart-btn card__cart-btn_active ">
                                     В корзине &#10004;
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="17">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like clicked" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">88</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/image 97.png" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <h3 class="card__title">Тарт «Экзотика»</h3>
+                            <p class="card__info">Основа — желированный крем «Дипломат» с экзотическим сочетанием фруктов на верхнем слое</p>
+                            <p class="card__info">220г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
-                                    В корзине &#10004;
+                                <h3 class="card__price">8,5 руб.</h3>
+                                <div class="card__cart-btn ">
+                                    В корзину
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="18">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like clicked" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">75</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/hrupkoe-pechene-s-kakao-scaled.jpg.png" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
+                            <h3 class="card__title">Чёрное и белое</h3>
+                            <p class="card__info">Хрупкое песочное шоколадное печенье с орехами и нотками ванилим</p>
                             <p class="card__info">150г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
-                                    В корзине &#10004;
+                                <h3 class="card__price">8,25 руб.</h3>
+                                <div class="card__cart-btn ">
+                                    В корзину
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="20">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">63</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/33936425.jpg" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
+                            <h3 class="card__title">Капкейки в подарок</h3>
+                            <p class="card__info">Ванильные капкейки со сливочным кремом и начинкой из клубники или вишни в шоколаде станут отличным подарком для любого повода</p>
+                            <p class="card__info">800г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
-                                    В корзине &#10004;
+                                <h3 class="card__price">12,90 руб.</h3>
+                                <div class="card__cart-btn ">
+                                    В корзину
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
+        
+                        <div class="card" data-product="19">
                             <div class="card-main">
                                 <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
+                                    <div class="likes__like clicked" title="Нравится">
                                     </div>
                                     <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
+                                        <p class="card__rating-number">52</p>
                                     </div>
                                 </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
+                                <img class="card__img" src="./img/products/hrupkoe-pechene-s-saharom-scaled.jpg" alt="Изображение товара">
                             </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
+                            <h3 class="card__title">Сахарное печенье</h3>
+                            <p class="card__info">Хрупкое песочное печенье в сахаре с ароматом ванили</p>
                             <p class="card__info">150г.</p>
                             <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
-                                    В корзине &#10004;
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
-                                    </div>
-                                    <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
-                                    </div>
-                                </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
-                            </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
-                            <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
-                                    В корзине &#10004;
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="likes">
-                                    <div class="likes__like clicked" data-productId="1" title="Нравится">
-                                    </div>
-                                    <div class="card__rating">
-                                        <p class="card__rating-number">3</p>
-                                    </div>
-                                </div>
-                                <img class="card__img" src="./img/products/1.jpg" alt="Изображение товара">
-                            </div>
-                            <h3 class="card__title">Торт «Лакомый кусочек»</h3>
-                            <p class="card__info">фукпукрукпн4уе34</p>
-                            <p class="card__info">150г.</p>
-                            <div class="card__bottom">
-                                <h3 class="card__price">8 руб.</h3>
-                                <div class="card__cart-btn card__cart-btn_active btn" data-fproductId="1">
+                                <h3 class="card__price">8,25 руб.</h3>
+                                <div class="card__cart-btn card__cart-btn_active ">
                                     В корзине &#10004;
                                 </div>
                             </div>
@@ -464,7 +538,110 @@
             </div>
         </section>
     </main>
-    футер
+    <footer class="footer container">
+        <div class="footer-top">
+            <div class="address-blocks__wrapper">
+                <div class="address-block">
+                    <div class="address-block__title">ул. Притыцкого, 101а</div>
+                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">пр-т Независимости, 168/1</div>
+                    <div class="address-block__subtitle">ст. м. «Уручье»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">пр-т Независимости, 44</div>
+                    <div class="address-block__subtitle">ст. м. «Площадь Победы»</div>
+                </div>
+                <div class="address-block">
+                    <div class="address-block__title">ул. Жуковая, 23к1</div>
+                    <div class="address-block__subtitle">ст. м. «Грушевка»</div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy;2010 — 2023, Лакомый кусочек Все права защищены
+                <br />
+                Дизайн и разработка: Ничипорчик А.И.
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__left">
+                <div class="opening-hours">
+                    9:00—20:00
+                    <br />
+                    Ежедневно
+                </div>
+                <div class="contacts">
+                    <a href="mailto:kysochek@mail.ru">kysochek@mail.ru</a>
+                    <div class="social-links">
+                        <a href="https:/vk.com/" target="_blank">
+                            <img src="./img/icons/vk.svg" alt="Вконтакте">
+                        </a>
+                        <a href="https:/telegram.org/" target="_blank">
+                            <img src="./img/icons/telegram.svg" alt="Телеграм">
+                        </a>
+                        <a href="https:/viber.com/" target="_blank">
+                            <img src="./img/icons/viber.svg" alt="Вайбер">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom__right">
+
+                <div class="phone-numbers">
+                    +375 (44) 272-57-42
+                    <br />
+                    +375 (33) 206-88-12
+                </div>
+                <a href="./404.html" class="privacy-policy">
+                    Политика
+                    <br />
+                    конфиденциальности
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal_wrapper">
+        <div class="modal_window ">
+            <img src="./img/icons/close.svg" alt="Закрыть" class="modal_close_button">
+            <img class="modal_img" src="./img/products/тьерри-1173-Edit-Десерт-Тропический-с-творогом.jpg" />
+            <div class="modal_block">
+                <span class="modal_tag">Десерты</span>
+                <div class="sales-blocks__wrapper">
+                    <div class="sale-block sale-block__type">Новинка</div>
+                    <div class="sale-block sale-block__sale">-15%</div>
+                </div>
+                <div class="modal-title__wrapper">
+                    <h2 class="modal_title section-title">Тарт «Экзотика»</h2>
+                    <div class="modal_likes">
+                        <div class="likes__like clicked" title="Нравится">
+                        </div>
+                        <div class="card__rating">
+                            <p class="card__rating-number">3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_tastes-blocks__wrapper">
+                    <div class="modal_taste-block">Лимон</div>
+                    <div class="modal_taste-block">Банан</div>
+                    <div class="modal_taste-block">Апельсин</div>
+                </div>
+                <p class="modal_info">Песочный тарт, крем из маракуйи, желе из экзотических фруктов,
+                    воздушное безе, 550г.
+                </p>
+                <div class="modal_block__bottom">
+                    <div class="modal_block__price-wrapper">
+                        <s class="modal_block__old-price">21,8 руб.</s>
+                        <h3 class="modal_block__price">18,53 руб.</h3>
+                    </div>
+                    <div class="card__cart-btn card__cart-btn_active ">
+                        В корзине &#10004;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         let showMore = document.body.querySelector(".show-more"),
             hiddenBlock = document.body.querySelector(".hidden-block"),
@@ -486,6 +663,49 @@
         });
 
     </script>
+
+    <div class="modal_wrapper">
+        <div class="modal_window ">
+            <img src="./img/icons/close.svg" alt="Закрыть" class="modal_close_button">
+            <img class="modal_img" src="./img/products/тьерри-1173-Edit-Десерт-Тропический-с-творогом.jpg" />
+            <div class="modal_block">
+                <span class="modal_tag">Десерты</span>
+                <div class="sales-blocks__wrapper">
+                    <div class="sale-block sale-block__type">Новинка</div>
+                    <div class="sale-block sale-block__sale">-15%</div>
+                </div>
+                <div class="modal-title__wrapper">
+                    <h2 class="modal_title section-title">Тарт «Экзотика»</h2>
+                    <div class="modal_likes">
+                        <div class="likes__like" title="Нравится">
+                        </div>
+                        <div class="card__rating">
+                            <p class="card__rating-number">3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_tastes-blocks__wrapper">
+                    <div class="modal_taste-block">Лимон</div>
+                    <div class="modal_taste-block">Банан</div>
+                    <div class="modal_taste-block">Апельсин</div>
+                </div>
+                <p class="modal_info">Песочный тарт, крем из маракуйи, желе из экзотических фруктов,
+                    воздушное безе
+                </p>
+                <p class="modal_info">550г.
+                </p>
+                <div class="modal_block__bottom">
+                    <div class="modal_block__price-wrapper">
+                        <s class="modal_block__old-price">21,8 руб.</s>
+                        <h3 class="modal_block__price">18,53 руб.</h3>
+                    </div>
+                    <div class="card__cart-btn">
+                        В корзину
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 

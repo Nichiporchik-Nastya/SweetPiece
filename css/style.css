@@ -701,6 +701,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+  width: 100%;
 }
 .modal_block__price {
   font-weight: bold;
@@ -722,6 +723,7 @@ s {
   top: 0;
   right: 0;
   margin: 20px;
+  cursor: pointer;
 }
 
 .modal_tastes-blocks__wrapper,
@@ -787,6 +789,33 @@ s {
 }
 .contacts-block__info .section-paragraph {
   margin-bottom: 20px;
+}
+
+.other-contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-blocks__wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fe8a01;
+  position: relative;
+}
+
+.history-block {
+  min-width: 450px;
+}
+.history-block__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.history-block__info {
+  line-height: 1.2em;
 }
 
 /*////////////////////////////////////////////////////////////////*/
@@ -900,11 +929,17 @@ s {
   }
   .contacts-info__wrapper .contacts-block__info {
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
   }
   .contacts-info__wrapper .contacts-block__info .section-paragraph {
+    max-width: 42vw;
     flex-direction: column;
     margin-right: 10%;
+  }
+  .other-contacts__wrapper {
+    flex-direction: row;
+    gap: 40px;
   }
   .map-block__wrapper {
     display: flex;
@@ -976,6 +1011,8 @@ s {
   .contacts-block__info {
     flex-direction: column;
     width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D4D4D4;
   }
   .map-block__wrapper {
     flex-direction: column;
@@ -983,6 +1020,9 @@ s {
   .map-block__wrapper .address-blocks__wrapper {
     flex-direction: row;
     width: 100%;
+  }
+  .section-paragraph {
+    min-width: 100%;
   }
 }
 @media (max-width: 600px) {
@@ -1076,6 +1116,9 @@ s {
   .sale-block {
     font-size: 0.8em;
   }
+  .history-block {
+    min-width: 450px;
+  }
 }
 @media (max-width: 360px) {
   .taste-block__wrapper {
@@ -1133,7 +1176,9 @@ s {
 }
 .card__info {
   color: #B7B7B7;
-  line-height: 1.5em;
+  line-height: 1.2em;
+  max-height: 3.8em;
+  overflow-y: hidden;
 }
 .card__price {
   font-weight: bold;
@@ -1160,6 +1205,12 @@ s {
   border: 3px solid #44ba40;
   font-size: 0.9em;
   background-color: #FFFFFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding: 10px 22px;
+  text-align: center;
+  display: inline-block;
 }
 
 .likes {
@@ -1187,7 +1238,6 @@ s {
   background-size: contain;
 }
 
-.card:hover .card__cart-btn,
 .card__cart-btn_active {
   background-color: #44ba40;
   color: #FFFFFF;
@@ -1778,7 +1828,7 @@ input[type=checkbox]:checked::after {
 
 .cart-cards__wrapper {
   display: grid;
-  width: 60vw;
+  width: 50vw;
   max-width: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
@@ -1792,15 +1842,23 @@ input[type=checkbox]:checked::after {
 .cart {
   margin-bottom: 80px;
 }
-
 .cart-card {
   display: flex;
   align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.cart-card__main {
+  display: flex;
   gap: 10px;
 }
 .cart-card__img {
   border-radius: 8px;
   width: 10vw;
+  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cart-card__info {
   display: flex;
@@ -1815,7 +1873,7 @@ input[type=checkbox]:checked::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 75%;
+  width: 5em;
   padding: 0.2em 0.6em;
   border-radius: 20px;
   border: 2px solid #f3f3f3;
@@ -1851,9 +1909,18 @@ input[type=checkbox]:checked::after {
   overflow-y: scroll;
   gap: 20px;
 }
+.favorites-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
 .favorites-card__img {
   border-radius: 20px;
   width: 18vw;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .favorites-card__title {
   font-weight: bold;
@@ -1870,8 +1937,6 @@ input[type=checkbox]:checked::after {
 @media (max-width: 1440px) {
   .cart-cards__wrapper {
     width: 100%;
-  }
-  .cart-cards__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }

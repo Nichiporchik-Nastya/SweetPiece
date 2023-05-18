@@ -27,7 +27,7 @@
     <header class="header">
         <div class="header__top container">
             <nav class="nav-static">
-                <a href="/" class="logo">
+                <a href="./index.html" class="logo">
                     <div class="logo__link">
                         <lottie-player class="logo__anim" src="./animations/logo.json" background="transparent"
                             speed="1" style="height: 3em;" hover></lottie-player>
@@ -46,10 +46,7 @@
                         <a href="./sales.html" class="header-btns__btn btn" id="about">Скидки</a>
                     </li>
                     <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn" id="contacts">Отзывы</a>
-                    </li>
-                    <li class="nav-static__menu-item">
-                        <a href="#" class="header-btns__btn btn" id="shops">О нас</a>
+                        <a href="./about.html" class="header-btns__btn btn" id="shops">О нас</a>
                     </li>
                 </ul>
             </nav>
@@ -96,31 +93,28 @@
                         <a href="./sales.html" id="sales">Скидки</a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="#" id="reviews">Отзывы</a>
-                    </li>
-                    <li class="burger-menu__nav-item">
-                        <a href="#" id="about">О нас</a>
+                        <a href="./about.html" id="about">О нас</a>
                     </li>
                 </ul>
                 <div class="burger-menu__nav-title">Категории</div>
                 <ul class="burger-menu__nav">
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Выпечка
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Десерты
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Конфеты
                         </a>
                     </li>
                     <li class="burger-menu__nav-item">
-                        <a href="./menu.php">
+                        <a href="./menu.html">
                             Наборы
                         </a>
                     </li>
@@ -227,7 +221,6 @@
             <div class="tag animated-item" style="--item-index:7;">Пирожное «Картошка»</div>
         </div>
     </section>
-    <!-- <footer></footer> -->
     <footer class="footer container">
         <div class="footer-top">
             <div class="address-blocks__wrapper">
@@ -236,16 +229,16 @@
                     <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">пр-т Независимости, 168/1</div>
+                    <div class="address-block__subtitle">ст. м. «Уручье»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">пр-т Независимости, 44</div>
+                    <div class="address-block__subtitle">ст. м. «Площадь Победы»</div>
                 </div>
                 <div class="address-block">
-                    <div class="address-block__title">ул. Притыцкого, 101а</div>
-                    <div class="address-block__subtitle">ст. м. «Каменная горка»</div>
+                    <div class="address-block__title">ул. Жуковая, 23к1</div>
+                    <div class="address-block__subtitle">ст. м. «Грушевка»</div>
                 </div>
             </div>
             <div class="copyright">
@@ -292,52 +285,7 @@
             </div>
         </div>
     </footer>
-    <!-- <footer></footer> -->
-    <div class="modal_wrapper">
-        <div class="modal_window ">
-            <button class="modal_close_button" title="закрыть модальное окно">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 2L22 22" stroke="black" stroke-width="2" stroke-linecap="round" />
-                    <path d="M22 2L2 22" stroke="black" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </button>
-            <img class="modal_img" src="./img/products/тьерри-1173-Edit-Десерт-Тропический-с-творогом.jpg" />
-            <div class="modal_block">
-                <span class="modal_tag">Десерты</span>
-                <div class="sales-blocks__wrapper">
-                    <div class="sale-block sale-block__type">Новинка</div>
-                    <div class="sale-block sale-block__sale">-15%</div>
-                </div>
-                <div class="modal-title__wrapper">
-                    <h2 class="modal_title section-title">Тарт «Экзотика»</h2>
-                    <div class="modal_likes">
-                        <div class="likes__like clicked" title="Нравится">
-                        </div>
-                        <div class="card__rating">
-                            <p class="card__rating-number">3</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal_tastes-blocks__wrapper">
-                    <div class="modal_taste-block">Лимон</div>
-                    <div class="modal_taste-block">Банан</div>
-                    <div class="modal_taste-block">Апельсин</div>
-                </div>
-                <p class="modal_info">Песочный тарт, крем из маракуйи, желе из экзотических фруктов,
-                    воздушное безе, 550г.
-                </p>
-                <div class="modal_block__bottom">
-                    <div class="modal_block__price-wrapper">
-                        <s class="modal_block__old-price">21,8 руб.</s>
-                        <h3 class="modal_block__price">18,53 руб.</h3>
-                    </div>
-                    <div class="card__cart-btn card__cart-btn_active btn">
-                        В корзине &#10004;
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <script src="./js/script.js"></script>
 </body>
 
