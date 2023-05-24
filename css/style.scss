@@ -51,17 +51,12 @@ body {
     position: relative;
 }
 
-// .body-overflow {
-//     overflow: hidden;
-// }
 
 .container {
     padding: 0 120px;
-    // display: block;
 }
 
 h1{
-    // display: flex;
     font-weight: bold;
     font-size: 4.5em;
     position: relative;
@@ -136,4 +131,3 @@ a {
 @import '_account-style.scss';
 
 
-// @import '_scroll-anim.sass';

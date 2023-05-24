@@ -20,7 +20,6 @@
     justify-content: space-between;
     width: 100%;
     min-width: 200px;
-    // padding: $min-padding;
     position: relative;
     border-radius: $radius;
     cursor: pointer;
@@ -59,7 +58,6 @@
     &__bottom {
         display: flex;
         justify-content: space-between;
-        // align-items: center;
         margin-top: 12px;
     }
 

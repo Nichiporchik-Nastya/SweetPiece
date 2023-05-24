@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *::-webkit-scrollbar {
   display: none;
 }
@@ -713,7 +712,6 @@ s {
 }
 
 .is-open > .modal_window {
-  /* эти стили применяются к .modal_window и .modal_img_window, когда у родительского элемента (.modal_wrapper/ .modal_img_wrapper) есть класс .is-open*/
   opacity: 1;
   transform: translateY(0);
 }
@@ -758,7 +756,6 @@ s {
   transform: scale(1);
 }
 
-/*////////////////////////////////////////////////////about*/
 .contacts-info__wrapper {
   display: flex;
   gap: 40px;
@@ -779,6 +776,7 @@ s {
 .map-block__wrapper .address-blocks__wrapper {
   margin-bottom: 20px;
   row-gap: 10px;
+  line-height: 1.4em;
 }
 
 .contacts-block__info {
@@ -795,6 +793,7 @@ s {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  line-height: 1.4em;
 }
 
 .history-blocks__wrapper {
@@ -1543,6 +1542,23 @@ label[for=ckbox] a {
     width: 95vw;
   }
 }
+.error {
+  color: #000;
+  background-color: #eee;
+  box-shadow: 15px 25px 0px 0px #eee;
+  z-index: 100;
+  position: absolute;
+  border-radius: 5px;
+  top: -50px;
+  left: 20px;
+  padding: 10px 15px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%, 20% 130%, 15% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%, 20% 130%, 15% 100%, 0% 100%);
+  animation: appearance 0.2s ease-out;
+}
+.disappearance {
+  animation: disappearance 0.2s ease-out;
+}
 .filters-block__input-wrapper {
   display: flex;
   margin-top: 12px;
@@ -1617,7 +1633,6 @@ label[for^=price] {
   margin-right: 8px;
 }
 
-/*Обозначает элемент с именем атрибута for значение которого начинается с "price"*/
 input[type=number] {
   border-radius: 20px;
   border: 2px solid #ffc100;
@@ -1689,6 +1704,7 @@ input[type=checkbox]:checked::after {
 
 .show-filters-btn {
   display: none;
+  cursor: pointer;
 }
 
 .filters-block__title-wrapper {
@@ -1703,6 +1719,7 @@ input[type=checkbox]:checked::after {
   overflow-y: scroll;
   min-width: 100%;
   gap: 10px;
+  padding-bottom: 20px;
 }
 .menu-cards__wrapper .card {
   min-width: 100px;
@@ -1880,6 +1897,14 @@ input[type=checkbox]:checked::after {
 }
 .cart-card__counter-count {
   padding: 0 8px;
+}
+.cart-card__remove-btn {
+  cursor: pointer;
+}
+
+.price-minus,
+.price-plus {
+  cursor: pointer;
 }
 
 .cart-actions {

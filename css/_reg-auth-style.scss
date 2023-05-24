@@ -137,3 +137,40 @@ label[for='ckbox'] a {
     .form-input {
         width: 95vw;}
 }
+
+.error {
+    color: #000;
+    background-color: #eee;
+    box-shadow: 15px 25px 0px 0px #eee;
+    z-index: 100;
+    position: absolute;
+    border-radius: 5px;
+    top: -50px;
+    left: $margin;
+    padding: 10px 15px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%, 20% 130%, 15% 100%, 0% 100%);
+    animation: appearance .2s ease-out;
+}
+
+@-webkit-keyframes appearance {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.disappearance {
+    animation: disappearance .2s ease-out;
+}
+
+@-webkit-keyframes disappearance {
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}

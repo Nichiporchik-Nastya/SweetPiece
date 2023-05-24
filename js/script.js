@@ -1,7 +1,5 @@
 ScrollOut({
     targets: ".animated-item",
-    // threshold:0.5,
-    // once: false
 });
 
 

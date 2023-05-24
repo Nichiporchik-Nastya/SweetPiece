@@ -39,16 +39,10 @@
         gap: calc($margin / 2);
         display: flex;
         flex-direction: column;
-        // line-height: 1.2em;
-        // font-size: 1.2em;
     }
 }
 
 .hero-paragraph__wrapper {
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: start;
-    // gap: calc($margin / 2);
 
     .hero-block__paragraph {
         width: 42%;
@@ -81,7 +75,6 @@
 
 .hero-title {
 
-    // max-width: 30vw;
     &__bar {
         position: relative;
 
@@ -112,16 +105,6 @@
     }
 }
 
-// @keyframes leftFade {
-//     from{
-//         opacity: 0;
-//         transform: translateX(-100px);
-//     }
-//     to{
-//         opacity: 1;
-//         transform: translateX(100px);
-//     }
-// }
 
 .section {
     margin-bottom: $max-margin;
@@ -210,14 +193,9 @@
 
     &__title {
         font-weight: bold;
-        // font-size: 1.6em;
         margin: $min-padding 0px;
     }
 
-    // &__subtitle {
-    // line-height: 1.1em;
-    // font-size: 1.2em;
-    // }
 }
 
 .benefits-section {
@@ -232,7 +210,6 @@
     &-bottom {
         display: flex;
         justify-content: space-between;
-        // margin-top: $margin;
     }
 
 }
@@ -242,9 +219,7 @@
     display: flex;
     width: 50%;
     flex-wrap: wrap;
-    // gap: $margin;
     justify-content: space-around;
-    // align-items: space-between;
 }
 
 
@@ -255,7 +230,6 @@
     &__title {
         font-weight: bold;
         margin-bottom: $margin / 2;
-        // font-size: 1.4em;
     }
 
     &__text {
@@ -268,13 +242,9 @@
         margin-top: $margin / 2;
     }
 
-    // &__icon img{
-    //     height: 40px;
-    // }
 }
 
 .benefits-img-wrapper {
-    // width: 40%;
     height: 50vh;
 
     img {
@@ -294,7 +264,6 @@
     width: calc(100% / 3);
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
 
     &__img-wrapper {
         width: 100%;
@@ -312,7 +281,6 @@
     &__title {
         font-weight: bold;
         margin: 12px 0px 8px;
-        // font-size: 1.4em;
     }
 
     &__info {
@@ -321,15 +289,12 @@
 }
 
 .search-block {
-    // background-color: $yellow;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto $max-margin;
     text-align: center;
-    // padding: 25vh 0;
-    // background: url(../img/hero-image.jpg) right;
     background-size: cover;
 }
 
@@ -383,9 +348,6 @@
     margin-bottom: $margin;
     justify-content: space-between;
     flex-wrap: wrap;
-    // gap: calc($margin * 2);
-    // gap: $margin;
-    // gap: $min-padding;
 }
 
 .taste-block__group {
@@ -396,7 +358,6 @@
 .taste-block {
     display: flex;
     align-items: center;
-    // width: 15vw;
     padding: $min-padding;
     cursor: pointer;
     transition: .2s ease;
@@ -409,17 +370,12 @@
 
     &__title {
         font-weight: bold;
-        // font-size: 1.6em;
         margin-bottom: $min-padding;
         width: 100%;
     }
 
-    // &__subtitle {
-    // font-size: 1.2em;
-    // }
 }
 
-////////////////////////////////////////////////
 .modal {
     &_wrapper {
         opacity: 0;
@@ -467,7 +423,6 @@
     &_img {
         border-radius: $radius;
         width: 50%;
-        // height: 100%;
         object-fit: cover;
     }
 
@@ -501,7 +456,6 @@ s {
 }
 
 .is-open>.modal_window {
-    /* эти стили применяются к .modal_window и .modal_img_window, когда у родительского элемента (.modal_wrapper/ .modal_img_wrapper) есть класс .is-open*/
     opacity: 1;
     transform: translateY(0);
 }
@@ -551,11 +505,9 @@ s {
     transform: scale(1);
 }
 
-/*////////////////////////////////////////////////////about*/
 
 .contacts-info__wrapper {
     display: flex;
-    // justify-content: space-between;
     gap: calc($margin * 2);
 }
 
@@ -574,6 +526,7 @@ s {
     .address-blocks__wrapper {
         margin-bottom: $margin;
         row-gap: calc($margin / 2);
+        line-height: 1.4em;
     }
 }
 
@@ -593,6 +546,7 @@ s {
     display: flex;
     flex-direction: column;
     gap: $margin;
+    line-height: 1.4em;
 }
 
 .history-blocks__wrapper {

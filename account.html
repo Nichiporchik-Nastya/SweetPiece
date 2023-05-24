@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <!--адаптиная вёрстка, масштаб 1 к 1 изначально,  для запрета масштабирования, -->
 
 
     <meta name="keywords"
@@ -154,18 +153,20 @@
             <section class="cart">
                 <h2 class="section-title animated-item" style="--item-index:1;">Корзина</h2>
                 <div class="cart-cards__wrapper">
-                    <div class="cart-card animated-item" style="--item-index:2;">
+                    <div class="cart-card animated-item" style="--item-index:2;" data-product>
                         <div class="cart-card__main">
                             <img src="./img/products/image 75.png" class="cart-card__img"
                                 alt="Изображение товара"></img>
                             <div class="cart-card__info">
                                 <div class="cart-card__title">Торт «Лакомый кусочек»</div>
-                                <h3 class="cart-card__price">11,5 руб.</h3>
+                                <span class="cart-card__price"><span class="card-price">11.5</span> руб.</h3>
+                                </span>
                                 <h3 class="cart-card__counter">
-                                    -
+                                    <span class="price-minus">-</span>
                                     <div class="cart-card__counter-count">1</div>
-                                    +
+                                    <span class="price-plus">+</span>
                                 </h3>
+
                             </div>
                         </div>
                         <div class="cart-card__remove-btn">
@@ -173,18 +174,20 @@
                         </div>
                     </div>
 
-                    <div class="cart-card animated-item" style="--item-index:2;">
+                    <div class="cart-card animated-item" style="--item-index:2.5;" data-product>
                         <div class="cart-card__main">
                             <img src="./img/products/hrupkoe-pechene-s-saharom-scaled.jpg" class="cart-card__img"
                                 alt="Изображение товара"></img>
                             <div class="cart-card__info">
                                 <div class="cart-card__title">Сахарное печенье</div>
-                                <h3 class="cart-card__price">8,25 руб.</h3>
+                                <span class="cart-card__price"><span class="card-price">8.25</span> руб.</h3>
+                                </span>
                                 <h3 class="cart-card__counter">
-                                    -
+                                    <span class="price-minus">-</span>
                                     <div class="cart-card__counter-count">3</div>
-                                    +
+                                    <span class="price-plus">+</span>
                                 </h3>
+
                             </div>
                         </div>
                         <div class="cart-card__remove-btn">
@@ -192,17 +195,19 @@
                         </div>
                     </div>
 
-                    <div class="cart-card animated-item" style="--item-index:2;">
+                    <div class="cart-card animated-item" style="--item-index:3;" data-product>
                         <div class="cart-card__main">
                             <img src="./img/products/1.jpg" class="cart-card__img" alt="Изображение товара"></img>
                             <div class="cart-card__info">
                                 <div class="cart-card__title">Даниш с малиной</div>
-                                <h3 class="cart-card__price">7,5 руб.</h3>
+                                <span class="cart-card__price"> <span class="card-price">7.5</span> руб.</h3>
+                                </span>
                                 <h3 class="cart-card__counter">
-                                    -
+                                    <span class="price-minus">-</span>
                                     <div class="cart-card__counter-count">2</div>
-                                    +
+                                    <span class="price-plus">+</span>
                                 </h3>
+
                             </div>
                         </div>
                         <div class="cart-card__remove-btn">
@@ -210,17 +215,19 @@
                         </div>
                     </div>
 
-                    <div class="cart-card animated-item" style="--item-index:2;">
+                    <div class="cart-card animated-item" style="--item-index:3.5;" data-product>
                         <div class="cart-card__main">
                             <img src="./img/products/3.jpg" class="cart-card__img" alt="Изображение товара"></img>
                             <div class="cart-card__info">
                                 <div class="cart-card__title">Слойка шведская с кардамоном</div>
-                                <h3 class="cart-card__price">3,4 руб.</h3>
+                                <span class="cart-card__price"><span class="card-price">3.4</span> руб.</h3>
+                                </span>
                                 <h3 class="cart-card__counter">
-                                    -
+                                    <span class="price-minus">-</span>
                                     <div class="cart-card__counter-count">2</div>
-                                    +
+                                    <span class="price-plus">+</span>
                                 </h3>
+
                             </div>
                         </div>
                         <div class="cart-card__remove-btn">
@@ -228,17 +235,19 @@
                         </div>
                     </div>
 
-                    <div class="cart-card animated-item" style="--item-index:2;">
+                    <div class="cart-card animated-item" style="--item-index:4;" data-product>
                         <div class="cart-card__main">
                             <img src="./img/products/4.jpg" class="cart-card__img" alt="Изображение товара"></img>
                             <div class="cart-card__info">
                                 <div class="cart-card__title">Даниш с персиком</div>
-                                <h3 class="cart-card__price">4,5 руб.</h3>
+                                <span class="cart-card__price"><span class="card-price">4.5</span> руб.</h3>
+                                </span>
                                 <h3 class="cart-card__counter">
-                                    -
+                                    <span class="price-minus">-</span>
                                     <div class="cart-card__counter-count">2</div>
-                                    +
+                                    <span class="price-plus">+</span>
                                 </h3>
+
                             </div>
                         </div>
                         <div class="cart-card__remove-btn">
@@ -259,7 +268,7 @@
                     </div>
                     <div class="cart-actions__bottom">
                         <h3 class="cart-actions__price animated-item" style="--item-index:7;">
-                            Итого 122.80 руб.
+                            Итого <span class="final-price">122.80</span> руб.
                         </h3>
                         <a href="./404.html" class="btn section-btn animated-item" style="--item-index:8;">
                             К оформлению
@@ -281,7 +290,7 @@
         <section class="section">
             <h2 class="section-title animated-item">Избранное</h2>
             <div class="favorites-cards__wrapper">
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -298,7 +307,7 @@
                         В корзину
                     </div>
                 </div>
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -316,7 +325,7 @@
                     </div>
                 </div>
 
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -334,7 +343,7 @@
                     </div>
                 </div>
 
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -352,7 +361,7 @@
                     </div>
                 </div>
 
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -371,7 +380,7 @@
                     </div>
                 </div>
 
-                <div class="favorites-card">
+                <div class="favorites-card" data-product>
                     <div class="card-main">
                         <div class="likes">
                             <div class="likes__like clicked" title="Нравится">
@@ -470,7 +479,7 @@
                 <div class="modal-title__wrapper">
                     <h2 class="modal_title section-title">Тарт «Экзотика»</h2>
                     <div class="modal_likes">
-                        <div class="likes__like clicked" title="Нравится">
+                        <div class="likes__like" title="Нравится">
                         </div>
                         <div class="card__rating">
                             <p class="card__rating-number">3</p>
@@ -483,20 +492,51 @@
                     <div class="modal_taste-block">Апельсин</div>
                 </div>
                 <p class="modal_info">Песочный тарт, крем из маракуйи, желе из экзотических фруктов,
-                    воздушное безе, 550г.
+                    воздушное безе
+                </p>
+                <p class="modal_info">550г.
                 </p>
                 <div class="modal_block__bottom">
                     <div class="modal_block__price-wrapper">
                         <s class="modal_block__old-price">21,8 руб.</s>
                         <h3 class="modal_block__price">18,53 руб.</h3>
                     </div>
-                    <div class="card__cart-btn card__cart-btn_active btn">
-                        В корзине &#10004;
+                    <div class="card__cart-btn">
+                        В корзину
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        let removeCardBtns = document.querySelectorAll(".cart-card__remove-btn");
+        let finalPrice = document.querySelector(".final-price");
+
+        removeCardBtns.forEach(rBtn => {
+            rBtn.onclick = () => {
+                rBtn.parentNode.remove();
+                FinalPrice();
+            }
+        });
+
+        function FinalPrice() {
+            let sum = 0;
+
+            cardPrices = document.querySelectorAll(".card-price");
+            cardPrices.forEach(price => {
+                let count = price.parentNode.nextSibling.nextSibling;
+                count = count.querySelector(".cart-card__counter-count");
+                
+                count = +count.innerHTML;
+                sum += parseFloat(price.innerHTML) * count;
+            });
+            finalPrice.innerHTML = sum;
+        }
+
+
+
+
+    </script>
     <script src="./js/script.js"></script>
 </body>
 

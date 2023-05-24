@@ -14,7 +14,6 @@
 
 .filters-block__title {
     font-weight: bold;
-    // font-size: 1.4em;
     margin-top: $margin;
 }
 
@@ -30,7 +29,7 @@
     background-color: $white;
     padding: $min-padding 0;
     position: sticky;
-    top: 50px; //50 - хедер
+    top: 50px;
     z-index: 1;
 }
 
@@ -42,7 +41,6 @@
     display: flex;
     justify-content: space-between;
     gap: $margin;
-    // position: relative;
 }
 
 .menu-blocks__right-wrapper {
@@ -66,7 +64,6 @@
         content: "";
         position: absolute;
         top: 40%;
-        // right: -$margin;
         right: $min-padding;
         width: 12px;
         height: 7px;
@@ -78,7 +75,6 @@ label[for^="price"] {
     margin-right: 8px;
 }
 
-/*Обозначает элемент с именем атрибута for значение которого начинается с "price"*/
 input[type="number"] {
     border-radius: $radius;
     border: $borderThickness solid $yellow;
@@ -150,6 +146,7 @@ input[type='checkbox']:checked::after {
 
 .show-filters-btn {
     display: none;
+    cursor: pointer;
 }
 
 .filters-block__title-wrapper {
@@ -164,6 +161,8 @@ input[type='checkbox']:checked::after {
     overflow-y: scroll;
     min-width: 100%;
     gap: calc($margin / 2);
+    
+    padding-bottom: 20px;
 
     .card {
         min-width: 100px;
@@ -185,7 +184,6 @@ input[type='checkbox']:checked::after {
         z-index: 1;
         width: 65%;
         max-height: 75vh;
-        // top: 25%;
         bottom: 0;
         right: 0;
         padding-left: $margin;
@@ -236,10 +234,5 @@ input[type='checkbox']:checked::after {
     }
 }
 
-// @media (max-width: 360px) {
 
 
-//     .menu-cards__wrapper {
-//         grid-template-columns: repeat(1, 1fr);
-//     }
-// }

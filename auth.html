@@ -19,6 +19,7 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 
 <body>
@@ -156,13 +157,13 @@
                 <form class="section-block__form" action="/" method="post">
 
                     <div class="form-input__wrapper">
-                        <input type="text" name="email" class="form-input animated-item" style="--item-index:1;"
-                            placeholder="Электронная почта" maxlength="50" required>
+                        <input type="text" name="email" id="auth_email" class="form-input animated-item"
+                            style="--item-index:1;" placeholder="Электронная почта" maxlength="50" required>
                         <span class="form-input__err email"></span>
                     </div>
                     <div class="form-input__wrapper">
-                        <input type="password" name="password" class="form-input animated-item" style="--item-index:2;"
-                            placeholder="Пароль" maxlength="50" required>
+                        <input type="password" name="password" id="auth_password" class="form-input animated-item"
+                            style="--item-index:2;" placeholder="Пароль" maxlength="50" required>
                         <span class="form-input__err password"></span>
                     </div>
 
@@ -170,15 +171,13 @@
                         <a href="./404.html">Забыли пароль?</a>
                     </div>
 
-                    <input type="hidden" name="go-login" value="5">
-
                     <div class="form-btns">
                         <div class="header-btns">
                             <a href="./reg.html" class="secondary-btn btn section-btn animated-item"
                                 style="--item-index:1;">
                                 Регистрация
                             </a>
-                            <p class="btn section-btn animated-item" style="--item-index:2;">
+                            <p class="btn section-btn btn-1 animated-item" style="--item-index:2;">
                                 Войти
                             </p>
                         </div>
@@ -252,14 +251,47 @@
             </div>
         </div>
     </footer>
+
     <script>
-        let submitBtn = document.body.querySelector("p.section-btn");
+        $(document).ready(function () {
+            $(".btn-1").click(function () {
+                $(".form-input").on("focus", function () {
+                    $(".error").addClass("disappearance");
 
-        submitBtn.onclick = () => {
+                    var remove = () =>
+                        $(".error").remove();
+                    setTimeout(remove, 200);
+                });
 
-            window.location = "./account.html";
+                let authEmail = $('#auth_email').val();
+                let authPassword = $('#auth_password').val();
 
-        }
+                let authEmailValid = true;
+                let authPasswordValid = true;
+
+                if (authEmail.length < 1) {
+                    $('#auth_email').before('<span class="error">Заполните это поле</span>');
+                } else {
+                    let regEx = /^[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}@(?:[A-Za-z0-9-]{1,63}.){1,125}[A-Za-z]{2,63}$/;
+                    let validEmail = regEx.test(authEmail);
+                    if (!validEmail) {
+                        $('#auth_email').before('<span class="error">Почта не соответствует шаблону xxx@xxx.xx</span>');
+                        authEmailValid = false;
+                    }
+                    else authEmailValid = true;
+                }
+
+                if (authPassword.length < 8) {
+                    $('#auth_password').before('<span class="error">Длина пароля должна быть более 8 символов</span>');
+                    authPasswordValid = false;
+                }
+                else authPasswordValid = true;
+
+                if (authEmailValid && authPasswordValid) {
+                    window.location = "./account.html";
+                }
+            });
+        });
     </script>
     <script src="./js/script.js"></script>
 </body>

@@ -19,6 +19,7 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 
 <body>
@@ -154,30 +155,30 @@
                 </h1>
                 <form class="section-block__form">
                     <div class="form-input__wrapper">
-                        <input type="text" name="user_name" style="--item-index:1;" class="form-input animated-item" placeholder="Имя" maxlength="50" required  >
+                        <input type="text" name="user_name" style="--item-index:1;" class="form-input animated-item"
+                            placeholder="Имя" id="first_name" maxlength="50" required>
                         <span class="form-input__err user_name"></span>
                     </div>
                     <div class="form-input__wrapper">
-                        <input type="text" name="email" style="--item-index:2;" class="form-input animated-item" placeholder="Электронная почта"
-                            maxlength="50" required >
+                        <input type="text" name="email" style="--item-index:2;" class="form-input animated-item"
+                            placeholder="Электронная почта" id="email" maxlength="50" required>
                         <span class="form-input__err email"></span>
                     </div>
                     <div class="form-input__wrapper">
-                        <input type="tel" name="phone" style="--item-index:3;" class="form-input animated-item" placeholder="Телефон" maxlength="50" required >
+                        <input type="tel" name="phone" style="--item-index:3;" class="form-input animated-item"
+                            placeholder="Телефон" id="phone" maxlength="50" required>
                         <span class="form-input__err phone"></span>
                     </div>
                     <div class="form-input__wrapper">
-                        <input type="text" name="address" style="--item-index:4;" class="form-input animated-item" placeholder="Адрес" maxlength="50" required >
+                        <input type="text" name="address" style="--item-index:4;" class="form-input animated-item"
+                            placeholder="Адрес" maxlength="50" id="address" required>
                         <span class="form-input__err address"></span>
                     </div>
                     <div class="form-input__wrapper">
-                        <input type="password" name="password" style="--item-index:5;" class="form-input animated-item" placeholder="Придумайте пароль"
-                            maxlength="50" required >
+                        <input type="password" name="password" style="--item-index:5;" class="form-input animated-item"
+                            placeholder="Придумайте пароль" id="password" maxlength="50" required>
                         <span class="form-input__err password"></span>
                     </div>
-
-
-                    <input type="hidden" name="go-reg" value="5">
 
                     <div class="recover animated-item" style="--item-index:6;">
                         <input type="checkbox" id="ckbox">
@@ -188,12 +189,13 @@
 
                     <div class="form-btns">
                         <div class="header-btns">
-                            <a href="./auth.html" class="secondary-btn btn section-btn animated-item" style="--item-index:1;">
+                            <a href="./auth.html" class="secondary-btn btn section-btn animated-item"
+                                style="--item-index:1;">
                                 Вход
                             </a>
-                            <p class="btn section-btn animated-item" style="--item-index:2;">
+                            <p class="btn section-btn btn-2 animated-item" style="--item-index:2;">
                                 Зарегистрироваться
-                            </з>
+                            </p>
                         </div>
                     </div>
 
@@ -270,16 +272,105 @@
             checkBox = document.body.querySelector("#ckbox"),
             submitBtn = document.body.querySelector("p.section-btn");
 
-        submitBtn.addEventListener("click", () => {
-            if (!checkBox.checked) {
-                checkBoxLabel.classList.add("unchecked");
-            }else{
-                window.location = "./account.html";
-            }
+            
 
-            let remove = () =>
-                checkBoxLabel.classList.remove("unchecked");
-            setTimeout(remove, 200);
+        // submitBtn.addEventListener("click", () => {
+        // if (!checkBox.checked) {
+        //     checkBoxLabel.classList.add("unchecked");
+        // } else {
+        //     window.location = "./account.html";
+        // }
+
+        // let remove = () =>
+        //     checkBoxLabel.classList.remove("unchecked");
+        // setTimeout(remove, 200);
+        // });
+
+        $(document).ready(function () {
+
+            $(".btn-2").click(function () {
+
+                if (!checkBox.checked) {
+                    checkBoxLabel.classList.add("unchecked");
+                }
+
+                if ($("#ckbox").is(':checked')) {
+
+                    $("label[for='ckbox']").removeClass("unchecked");
+
+                    $(".form-input").on("focus", function () {
+                        $(".error").addClass("disappearance");
+
+                        var remove = () =>
+                            $(".error").remove();
+                        setTimeout(remove, 200);
+                    });
+
+                    $(".error").click(function () {
+                        $(".error").addClass("disappearance");
+
+                        var remove = () =>
+                            $(".error").remove();
+                        setTimeout(remove, 200);
+                    });
+
+                    let valid = true;
+
+                    let first_name = $("#first_name").val();
+                    let email = $('#email').val();
+                    let password = $('#password').val();
+                    let phone = $('#phone').val();
+                    let address = $('#address').val();
+
+                    if (first_name.length < 1) {
+                        $('#first_name').before('<span class="error">Заполните это поле</span>');
+                        valid = false;
+                    }
+                    else valid = true;
+
+                    if (email.length < 1) {
+                        $('#email').before('<span class="error">Заполните это поле</span>');
+                    } else {
+                        let regEx = /^[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}@(?:[A-Za-z0-9-]{1,63}.){1,125}[A-Za-z]{2,63}$/;
+                        let validEmail = regEx.test(email);
+                        if (!validEmail) {
+                            $('#email').before('<span class="error">Почта не соответствует шаблону xxx@xxx.xx</span>');
+                        }
+                        valid = false;
+                    }
+
+                    if (phone.length < 1) {
+                        $('#phone').before('<span class="error">Заполните это поле</span>');
+                    } else {
+                        let regEx = /^\+375\(\d{2,3}\)\d{3}\-\d{2}\-\d{2}$/;
+                        let validPhone = regEx.test(phone);
+                        if (!validPhone) {
+                            $('#phone').before('<span class="error">Телефон не соответствует шаблону +375(xx)xxx-xx-xx</span>');
+                        }
+                        valid = false;
+                    }
+
+                    if (address.length < 1) {
+                        $('#address').before('<span class="error">Заполните это поле</span>');
+                        valid = false;
+                    }
+                    else valid = true;
+
+                    if (password.length < 8) {
+                        $('#password').before('<span class="error">Длина пароля должна быть более 8 символов</span>');
+                        valid = false;
+                    }
+                    else valid = true;
+
+                    if (valid) {
+                        window.location = "./account.html";
+                    }
+                }
+
+                let remove = () =>
+                    checkBoxLabel.classList.remove("unchecked");
+                setTimeout(remove, 200);
+            });
         });
     </script>
     <script src="./js/script.js"></script>

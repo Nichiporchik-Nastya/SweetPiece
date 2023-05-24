@@ -48,11 +48,9 @@
         }
 
         &__info {
-            // color: red;
             display: flex;
             flex-direction: column;
             gap: calc($margin / 2);
-            // justify-content: space-between;
             height: 100%;
         }
 
@@ -73,7 +71,16 @@
                 padding: 0 8px;
             }
         }
+
+        &__remove-btn {
+            cursor: pointer;
+        }
     }
+}
+
+.price-minus,
+.price-plus{
+    cursor: pointer;
 }
 
 .cart-actions {
